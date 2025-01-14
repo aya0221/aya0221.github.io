@@ -92,7 +92,7 @@ export default function Home() {
         </section>
 
         {/* Contact */}
-        <section className="space-y-8">
+        {/* <section className="space-y-8">
           <h2 className="text-2xl font-semibold">Get in Touch</h2>
           <div className="flex flex-wrap gap-4">
             {[
@@ -112,7 +112,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer'; // Import Footer
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -10,8 +11,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Your Name - Software Engineer',
-  description: 'Software Engineer specializing in full-stack development and AI',
+  title: 'Aya Oshima - AI Engineer',
+  description: 'AI Engineer specializing in ML, Robotics, and Full-stack Development',
 };
 
 export default function RootLayout({
@@ -28,12 +29,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Updated layout styles */}
-          <div className="min-h-screen flex flex-col items-center px-4">
+          <div className="min-h-screen flex flex-col">
             <Navigation />
-            <main className="flex-1 w-full max-w-4xl">
-              {children}
-            </main>
+            <main className="flex-1 w-full max-w-4xl mx-auto px-4">{children}</main>
+            <Footer /> {/* Footer added here */}
           </div>
         </ThemeProvider>
       </body>

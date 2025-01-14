@@ -1,36 +1,38 @@
-'use client'
+'use client';
 
-import * as React from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
-import { ModeToggle } from '@/components/mode-toggle'
+import * as React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
+import { ModeToggle } from '@/components/mode-toggle';
 
 export function Navigation() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
-      <div className="container flex items-center justify-between h-16 max-w-7xl mx-auto px-4">
-        {/* Updated Logo */}
+      <div className="container flex items-center justify-between h-20 max-w-6xl mx-auto px-4">
+        {/* Logo Section */}
         <Link
           href="/"
-          className="flex items-center space-x-2 text-lg font-bold gradient-text"
+          className="flex items-center space-x-4"
         >
           <img
-            src="/path-to-your-logo.jpg" // Replace with your logo path
-            alt="AO Logo"
-            className="w-10 h-10 rounded-full border-2 border-primary hover:scale-105 transition-transform"
+            src="/images/ayalogo.jpg"
+            alt="Aya Oshima Logo"
+            className="w-16 h-16 rounded-full border-4 border-primary hover:scale-105 transition-transform"
           />
-          <span className="text-primary hover:text-secondary">AO</span>
+          <span className="text-4xl font-bold gradient-text">
+            AYAOSHIMA<span className="rotate-text"></span>
+          </span>
         </Link>
-
-        <nav className="flex items-center space-x-8">
+        {/* Navigation Links */}
+        <nav className="flex items-center space-x-12">
           <Link
             href="/about"
             className={cn(
-              "link-underline",
-              pathname === '/about' ? "text-primary" : "text-muted-foreground"
+              'text-xl font-semibold text-gradient hover:scale-110 transition-transform',
+              pathname === '/about' && 'text-primary'
             )}
           >
             about
@@ -38,8 +40,8 @@ export function Navigation() {
           <Link
             href="/work"
             className={cn(
-              "link-underline",
-              pathname === '/work' ? "text-primary" : "text-muted-foreground"
+              'text-xl font-semibold text-gradient hover:scale-110 transition-transform',
+              pathname === '/work' && 'text-primary'
             )}
           >
             work
@@ -47,8 +49,8 @@ export function Navigation() {
           <Link
             href="/blog"
             className={cn(
-              "link-underline",
-              pathname === '/blog' ? "text-primary" : "text-muted-foreground"
+              'text-xl font-semibold text-gradient hover:scale-110 transition-transform',
+              pathname === '/blog' && 'text-primary'
             )}
           >
             blog
@@ -56,16 +58,16 @@ export function Navigation() {
           <Link
             href="/video"
             className={cn(
-              "link-underline",
-              pathname === '/video' ? "text-primary" : "text-muted-foreground"
+              'text-xl font-semibold text-gradient hover:scale-110 transition-transform',
+              pathname === '/video' && 'text-primary'
             )}
           >
             video
           </Link>
         </nav>
-
+        {/* Mode Toggle */}
         <ModeToggle />
       </div>
     </header>
-  )
+  );
 }
