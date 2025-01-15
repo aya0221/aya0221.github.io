@@ -39,6 +39,8 @@ const nextConfig = {
     parallelServerCompiles: true, // Experimental feature
   },
   output: "export", // Enable static export
+  basePath: "", // Ensure correct paths for GitHub Pages
+  trailingSlash: true, // Add trailing slash to paths for static export
 };
 
 // Attempt to load user-specific configuration
