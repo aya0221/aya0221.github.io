@@ -1,48 +1,58 @@
-let userConfig = undefined
-try {
-  userConfig = await import('./v0-user-next.config')
-} catch (e) {
-  // ignore error
+// Helper function to merge configurations
+function mergeConfig(baseConfig, additionalConfig) {
+  if (!additionalConfig) {
+    return baseConfig;
+  }
+
+  for (const key in additionalConfig) {
+    if (
+      typeof baseConfig[key] === "object" &&
+      !Array.isArray(baseConfig[key])
+    ) {
+      baseConfig[key] = {
+        ...baseConfig[key],
+        ...additionalConfig[key],
+      };
+    } else {
+      baseConfig[key] = additionalConfig[key];
+    }
+  }
+
+  return baseConfig;
 }
 
+// Base Next.js configuration
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // Ignore ESLint errors during build
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // Ignore TypeScript errors during build
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // Disable image optimization
   },
   experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
+    webpackBuildWorker: true, // Experimental feature
+    parallelServerBuildTraces: true, // Experimental feature
+    parallelServerCompiles: true, // Experimental feature
   },
-}
+  output: "export", // Enable static export
+};
 
-mergeConfig(nextConfig, userConfig)
-
-function mergeConfig(nextConfig, userConfig) {
-  if (!userConfig) {
-    return
+// Attempt to load user-specific configuration
+async function getConfig() {
+  let userConfig;
+  try {
+    userConfig = await import("./v0-user-next.config");
+  } catch (e) {
+    // Ignore error if user configuration is not found
+    userConfig = undefined;
   }
 
-  for (const key in userConfig) {
-    if (
-      typeof nextConfig[key] === 'object' &&
-      !Array.isArray(nextConfig[key])
-    ) {
-      nextConfig[key] = {
-        ...nextConfig[key],
-        ...userConfig[key],
-      }
-    } else {
-      nextConfig[key] = userConfig[key]
-    }
-  }
+  // Merge and return the final configuration
+  return mergeConfig(nextConfig, userConfig?.default || {});
 }
 
-export default nextConfig
+export default await getConfig();
