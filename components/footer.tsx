@@ -3,34 +3,34 @@ import { Mail, Github, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-accent/10 py-8">
-      <div className="container flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Aya Oshima. All rights reserved.
-        </p>
-        <div className="flex items-center space-x-6">
+    <footer className="py-8">
+      <div className="container flex flex-col items-center space-y-8">
+        {/* Icon Links with Optimized Colors */}
+        <div className="flex items-center space-x-10">
           <Link
             href="mailto:ayaoshima.us@gmail.com"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="bg-green-500 text-white rounded-full p-6 hover:bg-green-600 transition-transform transform hover:scale-125 shadow-lg"
           >
-            <Mail className="h-8 w-8" /> {/* Increased icon size */}
+            <Mail className="h-10 w-10" />
             <span className="sr-only">Email</span>
           </Link>
           <Link
             href="https://github.com/aya0221"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="bg-blue-500 text-white rounded-full p-6 hover:bg-blue-600 transition-transform transform hover:scale-125 shadow-lg"
           >
-            <Github className="h-8 w-8" /> {/* Increased icon size */}
+            <Github className="h-10 w-10" />
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
             href="https://www.linkedin.com/in/ayaoshima"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="bg-green-500 text-white rounded-full p-6 hover:bg-green-600 transition-transform transform hover:scale-125 shadow-lg"
           >
-            <Linkedin className="h-8 w-8" /> {/* Increased icon size */}
+            <Linkedin className="h-10 w-10" />
             <span className="sr-only">LinkedIn</span>
           </Link>
         </div>
+        {/* Footer Text */}
+        <p className="text-green-500 font-bold text-sm">COPYRIGHT AYAOSHIMA 2024</p>
       </div>
     </footer>
   );
