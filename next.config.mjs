@@ -4,9 +4,10 @@ const nextConfig = {
   assetPrefix: "/aya0221.github.io/",
   trailingSlash: true,
   images: {
-    unoptimized: true, 
+    unoptimized: true,
   },
   reactStrictMode: true,
+  output: "export", 
 };
 
 export default nextConfig;
