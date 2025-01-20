@@ -1,8 +1,12 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import Link from "next/link";
-import { Calendar, ArrowUpRight, Home, X } from "lucide-react";
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Calendar, ArrowUpRight, Home, X, Filter, RefreshCw, Tag } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Badge } from "@/components/ui/badge"
+import { cn } from "@/lib/utils"
 
 const categories = [
   {
@@ -18,32 +22,24 @@ const categories = [
     subcategories: ["Theory", "Leetcodes", "Others"],
   },
   {
-    title: "Computational Neurosciec",
-    subcategories: [
-      "Statistical Modeling on Neuron Data",
-      "BCI Brain Computer Interface",
-      "Hardware",
-      "Computations",
-    ],
+    title: "Computational Neuroscience",
+    subcategories: ["Statistical Modeling on Neuron Data", "BCI Brain Computer Interface", "Hardware", "Computations"],
   },
   {
     title: "Operating System",
-    subcategories: [
-      "Theory",
-      "Dualboot",
-    ],
+    subcategories: ["Theory", "Dualboot"],
   },
-];
+]
 
 const posts = [
   {
     title: "Operating System Dualboot: A Comprehensive Guide",
-    date: "2025-01-14", // Update to today's date or your preferred date
+    date: "2025-01-14",
     excerpt:
       "A detailed guide to setting up a dual-boot system with Windows and Linux, covering installation, partitioning, and troubleshooting.",
     slug: "operating-system-dualboot",
     category: "Operating System",
-    tags: ["Dualboot", "Linux", "Windows"],
+    tags: ["Dualboot", "Linux", "Windows", "OS", "Theory"],
   },
   {
     title: "Secure Coding Best Practices",
@@ -51,7 +47,7 @@ const posts = [
     excerpt: "Learn about secure coding principles to protect your software from vulnerabilities.",
     slug: "secure-coding-best-practices",
     category: "Software Development",
-    tags: ["Security", "Coding", "Best Practices"],
+    tags: ["Security", "Coding", "Best Practices", "Theory"],
   },
   {
     title: "Introduction to Docker and Containerization",
@@ -59,7 +55,7 @@ const posts = [
     excerpt: "An overview of Docker and how containerization revolutionizes software development.",
     slug: "intro-to-docker-containerization",
     category: "DevOps",
-    tags: ["Docker", "Containerization", "DevOps"],
+    tags: ["Docker", "Containerization", "DevOps", "Theory"],
   },
   {
     title: "Design Patterns in Software Development",
@@ -67,7 +63,7 @@ const posts = [
     excerpt: "Exploring design patterns that improve the quality, scalability, and maintainability of software.",
     slug: "design-patterns-in-software-dev",
     category: "Software Design",
-    tags: ["Design Patterns", "Software Development"],
+    tags: ["Design Patterns", "Software Development", "Theory"],
   },
   {
     title: "Getting Started with GraphQL",
@@ -75,7 +71,7 @@ const posts = [
     excerpt: "Understand the basics of GraphQL and how it simplifies API development.",
     slug: "getting-started-with-graphql",
     category: "API Development",
-    tags: ["GraphQL", "API", "Backend"],
+    tags: ["GraphQL", "API", "Backend", "Theory"],
   },
   {
     title: "Effective Error Handling in Software Development",
@@ -83,7 +79,7 @@ const posts = [
     excerpt: "Learn how to handle errors gracefully and maintain robust software systems.",
     slug: "effective-error-handling",
     category: "Software Development",
-    tags: ["Error Handling", "Software Development"],
+    tags: ["Error Handling", "Software Development", "Theory"],
   },
   {
     title: "(Coming Soon) Neural-Symbolic VQA: Challenges and Insights",
@@ -92,7 +88,7 @@ const posts = [
       "Reflections on developing a multi-modal AI system integrating computer vision, NLP, and symbolic reasoning to improve question-answering accuracy.",
     slug: "neural-symbolic-vqa",
     category: "Machine Learning",
-    tags: ["AI", "NLP", "Computer Vision"],
+    tags: ["AI", "NLP", "Computer Vision", "ML Algorithm"],
   },
   {
     title: "(Coming Soon) Mastering Object Tracking with Kalman Filters",
@@ -101,7 +97,7 @@ const posts = [
       "An exploration of how CNNs and Kalman Filters can address object occlusions, with applications in robotics and surveillance.",
     slug: "object-tracking-kalman",
     category: "Machine Learning",
-    tags: ["AI", "Robotics", "Tracking"],
+    tags: ["AI", "Robotics", "Tracking", "Computer Vision", "ML Algorithm"],
   },
   {
     title: "(Coming Soon) Dimensional Reduction: Applying TCA to Brain Data",
@@ -110,58 +106,108 @@ const posts = [
       "Insights from applying Tensor Component Analysis (TCA) to decode large-scale neural datasets, uncovering brain activity patterns.",
     slug: "dimensional-reduction",
     category: "Computational Neuroscience",
-    tags: ["Computational Neuroscience", "Data Science"],
+    tags: ["Computational Neuroscience", "Data Science", "Statistical Modeling on Neuron Data"],
   },
-];
+]
 
 export default function BlogPage() {
-  const [navSearch, setNavSearch] = useState("");
-  const [blogSearch, setBlogSearch] = useState("");
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [navSearch, setNavSearch] = useState("")
+  const [blogSearch, setBlogSearch] = useState("")
+  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkIsMobile()
+    window.addEventListener("resize", checkIsMobile)
+
+    return () => window.removeEventListener("resize", checkIsMobile)
+  }, [])
+
+  const clearFilters = () => {
+    setNavSearch("")
+    setActiveFilters([])
+  }
+
+  const toggleFilter = (filter: string) => {
+    setActiveFilters((prev) => (prev.includes(filter) ? prev.filter((f) => f !== filter) : [...prev, filter]))
+  }
 
   // Filter navigation categories
   const filteredCategories = categories.filter(
     (category) =>
       category.title.toLowerCase().includes(navSearch.toLowerCase()) ||
-      category.subcategories.some((subcategory) =>
-        subcategory.toLowerCase().includes(navSearch.toLowerCase())
-      )
-  );
+      category.subcategories.some((subcategory) => subcategory.toLowerCase().includes(navSearch.toLowerCase())),
+  )
 
   // Filter blog posts
   const filteredPosts = posts.filter(
     (post) =>
-      (!activeCategory || post.category === activeCategory) &&
+      (activeFilters.length === 0 || activeFilters.some((filter) => post.tags.includes(filter))) &&
       (post.title.toLowerCase().includes(blogSearch.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(blogSearch.toLowerCase()) ||
-        post.tags.some((tag) => tag.toLowerCase().includes(blogSearch.toLowerCase())))
-  );
+        post.tags.some((tag) => tag.toLowerCase().includes(blogSearch.toLowerCase()))),
+  )
+
+  // Get all unique tags
+  const allTags = Array.from(new Set(posts.flatMap((post) => post.tags)))
 
   return (
-    <div className="pt-20 pb-16 flex">
+    <div className="pt-20 pb-16 flex flex-col md:flex-row">
+      {/* Filter and Clear Buttons (Mobile) */}
+      {isMobile && (
+        <div className="flex justify-between mb-4 mx-4">
+          <Button onClick={() => setIsFilterOpen(!isFilterOpen)} className="flex-1 mr-2">
+            <Filter className="mr-2 h-4 w-4" /> Filter
+          </Button>
+          <Button onClick={clearFilters} variant="outline" className="flex-1 ml-2">
+            <RefreshCw className="mr-2 h-4 w-4" /> Clear
+          </Button>
+        </div>
+      )}
+
       {/* Left Navigation */}
-      {/* <aside className="fixed top-20 left-0 h-[calc(100vh-5rem)] w-64 bg-gray-100 text-gray-800 shadow-md overflow-auto"> */}
-      <aside className="fixed top-20 left-0 h-[calc(100vh-5rem)] w-70 bg-gray-100 text-gray-800 shadow-md overflow-auto">
+      <aside
+        className={cn(
+          "md:fixed md:top-20 md:left-0 md:h-[calc(100vh-5rem)] md:w-70 bg-card text-card-foreground shadow-md overflow-auto transition-all duration-300 ease-in-out",
+          isMobile ? (isFilterOpen ? "fixed inset-0 z-50" : "hidden") : "block",
+        )}
+      >
         <div className="p-4">
-          {/* Navigation Search */}
+          {isMobile && (
+            <Button onClick={() => setIsFilterOpen(false)} className="mb-4" variant="outline">
+              <X className="mr-2 h-4 w-4" /> Close
+            </Button>
+          )}
+          {/* Navigation Search and Clear Button */}
           <div className="relative mb-4">
-            <input
+            <Input
               type="text"
               placeholder="Search Navigation..."
-              className="w-full border px-3 py-2 rounded-md"
               value={navSearch}
               onChange={(e) => setNavSearch(e.target.value)}
             />
             {navSearch && (
               <button
-                className="absolute right-2 top-2 text-gray-500 hover:text-gray-800"
+                className="absolute right-2 top-2 text-muted-foreground hover:text-foreground"
                 onClick={() => setNavSearch("")}
               >
                 <X size={16} />
               </button>
             )}
           </div>
-          <h2 className="text-xl font-bold mb-4">Navigation</h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-bold">Navigation</h2>
+            {!isMobile && (
+              <Button onClick={clearFilters} variant="outline" size="sm">
+                <RefreshCw className="mr-2 h-4 w-4" /> Clear Filters
+              </Button>
+            )}
+          </div>
           {filteredCategories.map((category, idx) => (
             <div key={idx} className="mb-4">
               <h3 className="font-medium text-lg">{category.title}</h3>
@@ -169,14 +215,10 @@ export default function BlogPage() {
                 {category.subcategories.map((subcategory, idx) => (
                   <li key={idx}>
                     <button
-                      className={`text-sm text-gray-600 hover:text-gray-800 ${
-                        activeCategory === subcategory ? "font-bold" : ""
+                      className={`text-sm text-muted-foreground hover:text-foreground ${
+                        activeFilters.includes(subcategory) ? "font-bold text-foreground" : ""
                       }`}
-                      onClick={() =>
-                        setActiveCategory(
-                          activeCategory === subcategory ? null : subcategory
-                        )
-                      }
+                      onClick={() => toggleFilter(subcategory)}
                     >
                       {subcategory}
                     </button>
@@ -185,35 +227,49 @@ export default function BlogPage() {
               </ul>
             </div>
           ))}
-          {filteredCategories.length === 0 && (
-            <p className="text-gray-500">No navigation items found.</p>
-          )}
+          {filteredCategories.length === 0 && <p className="text-muted-foreground">No navigation items found.</p>}
         </div>
       </aside>
 
       {/* Main Content */}
-      <main className="ml-72 p-8">
+      <main className="md:ml-72 p-4 md:p-8 w-full">
         <header className="flex items-center justify-between mb-8">
           <h1 className="text-3xl font-bold gradient-text">AI Research Blog</h1>
           <nav className="flex items-center space-x-4">
-            <Link href="/" className="text-blue-500 hover:underline">
+            <Link href="/" className="text-primary hover:underline">
               <Home />
             </Link>
           </nav>
         </header>
 
+        {/* Active Filters */}
+        {activeFilters.length > 0 && (
+          <div className="mb-4 flex flex-wrap gap-2">
+            {activeFilters.map((filter) => (
+              <Badge key={filter} variant="secondary" className="px-2 py-1 text-sm font-medium">
+                {filter}
+                <button
+                  className="ml-1 text-muted-foreground hover:text-foreground"
+                  onClick={() => toggleFilter(filter)}
+                >
+                  <X size={14} />
+                </button>
+              </Badge>
+            ))}
+          </div>
+        )}
+
         {/* Blog Search */}
         <div className="relative mb-6">
-          <input
+          <Input
             type="text"
             placeholder="Search Blogs..."
-            className="w-full border px-3 py-2 rounded-md"
             value={blogSearch}
             onChange={(e) => setBlogSearch(e.target.value)}
           />
           {blogSearch && (
             <button
-              className="absolute right-2 top-2 text-gray-500 hover:text-gray-800"
+              className="absolute right-2 top-2 text-muted-foreground hover:text-foreground"
               onClick={() => setBlogSearch("")}
             >
               <X size={16} />
@@ -222,36 +278,38 @@ export default function BlogPage() {
         </div>
 
         {/* Blog Content */}
-        <section className="space-y-16">
+        <section className="space-y-8">
           {filteredPosts.map((post, idx) => (
             <Link
               key={idx}
               href={`/blog/${post.slug}`}
-              className="group block space-y-4 hover-lift border rounded-lg p-6 bg-white text-gray-800 shadow"
+              className="group block space-y-4 hover-lift border rounded-lg p-6 bg-card text-card-foreground shadow"
             >
               <article>
-                <div className="mb-2 flex items-center space-x-2 text-sm text-gray-500">
+                <div className="mb-2 flex items-center space-x-2 text-sm text-muted-foreground">
                   <Calendar className="w-4 h-4" />
-                  <time dateTime={post.date}>
-                    {new Date(post.date).toDateString()}
-                  </time>
+                  <time dateTime={post.date}>{new Date(post.date).toDateString()}</time>
                 </div>
-                <h2 className="text-xl font-bold mb-2 group-hover:text-blue-500">
-                  {post.title}
-                </h2>
-                <p className="text-gray-600">{post.excerpt}</p>
-                <div className="mt-4 flex items-center space-x-2 text-blue-500">
+                <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h2>
+                <p className="text-muted-foreground">{post.excerpt}</p>
+                <div className="mt-4 flex items-center space-x-2 text-primary">
                   <span>Read more</span>
                   <ArrowUpRight />
+                </div>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {post.tags.map((tag) => (
+                    <Badge key={tag} variant="outline" className="text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
               </article>
             </Link>
           ))}
-          {filteredPosts.length === 0 && (
-            <p className="text-gray-500">No blogs match your search criteria.</p>
-          )}
+          {filteredPosts.length === 0 && <p className="text-muted-foreground">No blogs match your search criteria.</p>}
         </section>
       </main>
     </div>
-  );
+  )
 }
+
