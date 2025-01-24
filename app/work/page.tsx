@@ -7,7 +7,7 @@ const projects = [
     title: "Dimensional Reduction for Neuron Data",
     description: "Explored dimensional reduction techniques (PCA, TCA) applied to large-scale neural datasets. Conducted analysis on complex neural patterns, providing insights into brain activity and computational neuroscience.",
     images: ["/images/thesis_demo.jpg", "/images/thesis_demo_paper1.jpg"],
-    tags: ["PCA", "TCA", "Computational Neuroscience", "Data Analysis"],
+    tags: ["Statistical Modeling", "PCA", "TCA", "Computational Neuroscience", "Data Analysis", "Dimension Reduction", "Matlab", "Python"],
     link: "https://aya0221.github.io/thesis-pdf/thesis_ayaoshima.pdf",
     isPdf: true,
   },
@@ -15,14 +15,14 @@ const projects = [
     title: "Neural-Symbolic VQA",
     description: "Designed a multi-modal AI system integrating computer vision, NLP, and symbolic reasoning to enhance visual question answering on the Sort-of-CLEVR dataset. Achieved high accuracy in both relational and non-relational questions.",
     images: ["/images/vqa_demophoto.jpg", "/images/vqa_techphoto.jpg"],
-    tags: ["CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Computer Vision"],
+    tags: ["Multi-Modal", "Computer Vision", "CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Python"],
     link: "https://github.com/aya0221/Neural-Symbolic-VQA-Sort-of-CLEVR",
   },
   {
     title: "Object Tracking Under Occlusions",
     description: "Built a robust object tracking system combining CNN-based detection and Kalman filters to predict and track occluded objects effectively. Developed using ResNet for feature extraction, enabling accurate tracking under challenging conditions.",
     images: ["/images/ballpic.jpg", "/images/objDetection_ballpic.jpg"],
-    tags: ["CNN", "Kalman Filter (Mathematical Modeling)", "Object Tracking", "ResNet"],
+    tags: ["Mathematical Modeling", "Kalman Filter", "Object Tracking", "CNN", "ResNet", "Python"],
     link: "https://github.com/aya0221/Object-Tracking-Under-Occlusions",
   },
 ]
@@ -32,9 +32,9 @@ export default function WorkPage() {
     <div className="pt-32 pb-16">
       <div className="container max-w-4xl space-y-16">
         <section className="space-y-8">
-          <h1 className="text-4xl font-bold gradient-text">Selected Work</h1>
+          <h1 className="text-4xl font-bold gradient-text">Aya's Projects</h1>
           <p className="text-lg text-muted-foreground">
-            A collection of projects that showcase my expertise in AI, machine learning, and computational neuroscience.
+            AI / Machine Mearning / Computational Neuroscience
           </p>
         </section>
 

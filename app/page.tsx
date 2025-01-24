@@ -42,7 +42,7 @@ export default function Home() {
               computational neuroscience, under the guidance of Prof. Robert C. Froemke.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["PCA", "TCA", "Computational Neuroscience", "Data Analysis"].map((tag, tagIndex) => (
+              {["Statistical Modeling", "PCA", "TCA", "Computational Neuroscience", "Data Analysis", "Dimension Reduction", "Matlab", "Python"].map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
                   className="text-sm px-3 py-1 rounded-full bg-muted text-muted-foreground"
@@ -76,14 +76,14 @@ export default function Home() {
                 title: "Neural-Symbolic VQA",
                 description:
                   "Designed a multi-modal AI system integrating computer vision, NLP, and symbolic reasoning to enhance visual question answering on the Sort-of-CLEVR dataset. Leveraged PyTorch to implement CNNs for image processing and integrated symbolic reasoning to provide interpretable results, improving accuracy and logical consistency.",
-                tags: ["CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Computer Vision"],
+                tags: ["Multi-Modal", "Computer Vision", "CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Python"],
                 link: "https://github.com/aya0221/Neural-Symbolic-VQA-Sort-of-CLEVR",
               },
               {
                 title: "Object Tracking Under Occlusions",
                 description:
                   "Built a robust object tracking system combining CNN-based detection and Kalman filters to predict and track occluded objects effectively. Developed using ResNet for feature extraction and applied in scenarios requiring real-time, accurate tracking under challenging visual conditions.",
-                tags: ["CNN", "Kalman Filter (Mathematical Modeling)", "Object Tracking", "ResNet"],
+                  tags: ["Mathematical Modeling", "Kalman Filter", "Object Tracking", "CNN", "ResNet", "Python"],
                 link: "https://github.com/aya0221/Object-Tracking-Under-Occlusions",
               },
             ].map((project, index) => (
