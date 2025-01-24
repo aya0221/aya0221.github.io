@@ -234,7 +234,7 @@ export default function BlogPage() {
       {/* Main Content */}
       <main className="md:ml-72 p-4 md:p-8 w-full">
         <header className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold gradient-text">AI Research Blog</h1>
+          <h1 className="text-3xl font-bold gradient-text">Computer Science Blog</h1>
           <nav className="flex items-center space-x-4">
             <Link href="/" className="text-primary hover:underline">
               <Home />
