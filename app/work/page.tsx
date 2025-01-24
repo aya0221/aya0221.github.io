@@ -40,9 +40,12 @@ export default function WorkPage() {
 
         <section className="space-y-16">
           {projects.map((project, index) => (
-            <div
+            <Link
               key={index}
-              className="p-6 rounded-lg border bg-card hover-lift colorful-border flex flex-col md:flex-row gap-4"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-6 rounded-lg border bg-card hover-lift colorful-border flex flex-col md:flex-row gap-4"
             >
               {/* Left Half: Text */}
               <div className="flex-1">
@@ -80,7 +83,7 @@ export default function WorkPage() {
                   />
                 ))}
               </div>
-            </div>
+            </Link>
           ))}
         </section>
       </div>

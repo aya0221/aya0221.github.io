@@ -28,7 +28,13 @@ export default function Home() {
               <h3 className="text-xl font-semibold">
                 Thesis: Dimensional Reduction Techniques for Neural Data
               </h3>
-              <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <Link
+                  href="https://aya0221.github.io/thesis-pdf/thesis_ayaoshima.pdf"
+                  target="_blank"
+                  className="group-hover:text-primary transition-colors"
+                >
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground" />
+                </Link>
             </div>
             <p className="text-muted-foreground mb-4">
               Explored dimensional reduction techniques (PCA, TCA) applied to large-scale neural datasets. 
@@ -84,6 +90,8 @@ export default function Home() {
               <Link
                 key={index}
                 href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group p-6 rounded-lg border bg-card hover-lift colorful-border"
               >
                 <div className="flex justify-between items-start mb-4">
@@ -103,7 +111,6 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-
           </div>
         </section>
         {/* Experience */}
