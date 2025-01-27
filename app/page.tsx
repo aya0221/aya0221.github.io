@@ -18,7 +18,7 @@ export default function Home() {
         </section>
         {/* Featured Work */}
         <section className="space-y-8">
-          <h2 className="text-2xl font-semibold">Selected Work</h2>
+          <h2 className="text-2xl font-semibold">Highlight Work:</h2>
 
           {/* Thesis Section */}
         <div className="p-6 rounded-lg border bg-card hover-lift colorful-border flex flex-col md:flex-row gap-4">

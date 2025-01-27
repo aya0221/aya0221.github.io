@@ -32,10 +32,10 @@ export default function WorkPage() {
     <div className="pt-32 pb-16">
       <div className="container max-w-4xl space-y-16">
         <section className="space-y-8">
-          <h1 className="text-4xl font-bold gradient-text">Aya's Projects</h1>
-          <p className="text-lg text-muted-foreground">
+          <h1 className="text-4xl font-bold gradient-text">Machine Learning / Computational Neuroscience</h1>
+          {/* <p className="text-lg text-muted-foreground">
             AI / Machine Mearning / Computational Neuroscience
-          </p>
+          </p> */}
         </section>
 
         <section className="space-y-16">
