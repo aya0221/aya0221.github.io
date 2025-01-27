@@ -3,15 +3,18 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Github, Linkedin, MessageSquare, X } from 'lucide-react';
+import { Mail, Github, Linkedin, MessageSquare, X, Copy } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function Footer() {
+  // State variables for managing popups
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isMailOpen, setIsMailOpen] = useState(false);
+  const [copySuccess, setCopySuccess] = useState('');
 
-  // Prevent background scrolling when modal is open
+  // Prevent background scrolling when any modal is open
   useEffect(() => {
-    if (isChatOpen) {
+    if (isChatOpen || isMailOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -21,46 +24,74 @@ export function Footer() {
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [isChatOpen]);
+  }, [isChatOpen, isMailOpen]);
+
+  // Function to copy email to clipboard
+  const copyEmailToClipboard = () => {
+    navigator.clipboard.writeText('ayaoshima.us@gmail.com').then(
+      () => {
+        setCopySuccess('Copied!');
+        setTimeout(() => setCopySuccess(''), 2000); // Clear message after 2 seconds
+      },
+      () => {
+        setCopySuccess('Failed to copy!');
+        setTimeout(() => setCopySuccess(''), 2000);
+      }
+    );
+  };
 
   return (
     <footer className="py-8 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
       <div className="container flex flex-col items-center space-y-8">
         {/* Icon Links with Optimized Colors */}
         <div className="flex items-center space-x-10">
-          <Link
-            href="mailto:ayaoshima.us@gmail.com"
-            className="bg-green-500 text-white rounded-full p-6 hover:bg-green-600 transition-transform transform hover:scale-125 shadow-lg"
-            aria-label="Email"
+          {/* Mail Icon as a Button */}
+          <button
+            onClick={() => setIsMailOpen(true)}
+            className="bg-green-600 text-white rounded-full p-6 hover:bg-green-700 transition-transform transform hover:scale-125 shadow-lg flex flex-col items-center"
+            aria-label="Contact via Email"
+            title="Contact via Email"
           >
-            <Mail className="h-10 w-10" />
-          </Link>
+            <Mail className="h-10 w-10" /> 
+          </button>
+
+          {/* GitHub Link */}
           <Link
             href="https://github.com/aya0221"
-            className="bg-blue-500 text-white rounded-full p-6 hover:bg-blue-600 transition-transform transform hover:scale-125 shadow-lg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-purple-800 text-white rounded-full p-6 hover:bg-purple-900 transition-transform transform hover:scale-125 shadow-lg"
             aria-label="GitHub"
+            title="GitHub"
           >
             <Github className="h-10 w-10" />
           </Link>
+
+          {/* LinkedIn Link */}
           <Link
             href="https://www.linkedin.com/in/ayaoshima"
-            className="bg-green-500 text-white rounded-full p-6 hover:bg-green-600 transition-transform transform hover:scale-125 shadow-lg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-700 text-white rounded-full p-6 hover:bg-blue-800 transition-transform transform hover:scale-125 shadow-lg"
             aria-label="LinkedIn"
+            title="LinkedIn"
           >
             <Linkedin className="h-10 w-10" />
           </Link>
+
           {/* Chat Icon */}
           <button
             onClick={() => setIsChatOpen(true)}
-            className="bg-purple-500 text-white rounded-full p-6 hover:bg-purple-600 transition-transform transform hover:scale-125 shadow-lg"
+            className="bg-pink-500 text-white rounded-full p-6 hover:bg-pink-600 transition-transform transform hover:scale-125 shadow-lg"
             aria-label="Open Chat"
+            title="Open Chat"
           >
             <MessageSquare className="h-10 w-10" />
           </button>
         </div>
 
         {/* Footer Text */}
-        <p className="text-green-500 font-bold text-sm">COPYRIGHT AYAOSHIMA 2024</p>
+        <p className="text-green-500 font-bold text-sm">© AYAOSHIMA 2024</p>
       </div>
 
       {/* Chatbox Modal */}
@@ -85,6 +116,46 @@ export function Footer() {
               className="rounded-lg"
               loading="lazy"
             ></iframe>
+          </div>
+        </div>
+      )}
+
+      {/* Mail Popup Modal */}
+      {isMailOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-11/12 md:w-1/3 p-6 relative transition-colors duration-300">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMailOpen(false)}
+              className="absolute top-4 right-4 text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white transition-colors"
+              aria-label="Close Mail"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            {/* Email Address Display */}
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Contact Me</h2>
+            <div className="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-4 rounded mb-6">
+              <span className="text-lg text-gray-700 dark:text-gray-300 select-all">ayaoshima.us@gmail.com</span>
+              <button
+                onClick={copyEmailToClipboard}
+                className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 transition-colors"
+                aria-label="Copy Email"
+                title="Copy Email"
+              >
+                <Copy className="h-5 w-5" />
+              </button>
+            </div>
+            {/* Feedback Message */}
+            {copySuccess && (
+              <p className="text-green-500 text-sm mb-4">{copySuccess}</p>
+            )}
+            {/* Button to Open Mail Client */}
+            <a
+              href="mailto:ayaoshima.us@gmail.com"
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors flex items-center justify-center"
+            >
+              Send Email
+            </a>
           </div>
         </div>
       )}
