@@ -81,7 +81,7 @@ export function Footer() {
 
           {/* AyaChatBot Link */}
           <Link
-            href="https://aya-k1wbp9fpi-ao2368-nyuedus-projects.vercel.app/"
+            href="https://aya-i2ad0xrl3-ao2368-nyuedus-projects.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-pink-700 text-white rounded-full p-4 sm:p-6 hover:bg-pink-800 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
