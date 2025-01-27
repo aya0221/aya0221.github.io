@@ -79,15 +79,30 @@ export function Footer() {
             <Linkedin className="h-6 sm:h-10 w-6 sm:w-10" />
           </Link>
 
-          {/* Chat Icon */}
-          <button
+          {/* AyaChatBot Link */}
+          <Link
+            href="https://aya-k1wbp9fpi-ao2368-nyuedus-projects.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-pink-700 text-white rounded-full p-4 sm:p-6 hover:bg-pink-800 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
+            aria-label="ChatBot"
+            title="ChatBot"
+          >
+            <MessageSquare className="h-6 sm:h-10 w-6 sm:w-10" />
+          </Link>
+          
+          
+
+
+          {/* DialogFlow Chat Icon */}
+          {/* <button
             onClick={() => setIsChatOpen(true)}
             className="bg-pink-500 text-white rounded-full p-4 sm:p-6 hover:bg-pink-600 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
             aria-label="Open Chat"
             title="Open Chat"
           >
             <MessageSquare className="h-6 sm:h-10 w-6 sm:w-10" />
-          </button>
+          </button> */}
         </div>
 
         {/* Footer Text */}
