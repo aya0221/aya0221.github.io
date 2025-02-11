@@ -21,7 +21,8 @@ const projects = [
   {
     title: "Object Tracking Under Occlusions",
     description: "Built a robust object tracking system combining CNN-based detection and Kalman filters to predict and track occluded objects effectively. Developed using ResNet for feature extraction, enabling accurate tracking under challenging conditions.",
-    images: ["/images/ballpic.jpg", "/images/objDetection_ballpic.jpg"],
+    // Replace the MP4 path with your YouTube URL
+    video: "https://youtu.be/JBDR8HqBnNg",
     tags: ["Mathematical Modeling", "Kalman Filter", "Object Tracking", "CNN", "ResNet", "Python"],
     link: "https://github.com/aya0221/Object-Tracking-Under-Occlusions",
   },
@@ -70,18 +71,62 @@ export default function WorkPage() {
                 </div>
               </div>
 
-              {/* Right Half: Images */}
+              {/* Right Half: Images or Video */}
               <div className="flex flex-col flex-1 gap-4">
-                {project.images.map((image, imgIndex) => (
-                  <Image
-                    key={imgIndex}
-                    src={image}
-                    alt={`${project.title} Image ${imgIndex + 1}`}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto rounded-lg shadow-md"
-                  />
-                ))}
+                {((project.images) ? project.images : (project.video ? [project.video] : []))
+                  .map((media, imgIndex) => {
+                    if (
+                      media.includes("youtube.com") ||
+                      media.includes("youtu.be")
+                    ) {
+                      // Extract YouTube video ID from URL
+                      const videoId =
+                        media.split("v=")[1]?.split("&")[0] ||
+                        media.split("/").pop();
+                      const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                      return (
+                        <iframe
+                          key={imgIndex}
+                          width="800"
+                          height="450"
+                          src={embedUrl}
+                          title={`${project.title} YouTube video`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-auto rounded-lg shadow-md object-cover"
+                          style={{ maxHeight: '400px' }}
+                        ></iframe>
+                      );
+                    } else if (media.endsWith('.mp4')) {
+                      return (
+                        <video
+                          key={imgIndex}
+                          controls
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="w-full h-auto rounded-lg shadow-md object-cover"
+                          style={{ maxHeight: '400px' }}
+                        >
+                          <source src={media} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      );
+                    } else {
+                      return (
+                        <Image
+                          key={imgIndex}
+                          src={media}
+                          alt={`${project.title} Image ${imgIndex + 1}`}
+                          width={800}
+                          height={600}
+                          className="w-full h-auto rounded-lg shadow-md"
+                        />
+                      );
+                    }
+                  })}
               </div>
             </Link>
           ))}

@@ -33,6 +33,15 @@ const categories = [
 
 const posts = [
   {
+    title: "Advanced Object Tracking with SSD MobileNet V3 and Kalman Filter",
+    date: "2025-02-11",
+    excerpt:
+      "A deep dive into object tracking using SSD MobileNet V3 and Kalman Filter, covering real-time tracking, noise reduction, and multi-object handling in TensorFlow.",
+    slug: "object-tracking-ssd-mobilenet-v3-kalman",
+    category: "Computer Vision",
+    tags: ["Object Tracking", "Computer Vision", "TensorFlow", "Kalman Filter"],
+  },  
+  {
     title: "Operating System Dualboot: A Comprehensive Guide",
     date: "2025-01-14",
     excerpt:

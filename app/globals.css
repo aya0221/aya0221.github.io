@@ -61,6 +61,7 @@
   }
 }
 
+
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
 }
@@ -222,5 +223,31 @@
   .logo-container {
     font-size: 2rem;
   }
+}
+
+.prose {
+  max-width: 80ch;
+  margin: auto;
+  padding: 1.5rem 0;
+}
+
+.prose ul {
+  @apply list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300;
+}
+
+.prose ol {
+  @apply list-decimal list-inside space-y-3 text-gray-700 dark:text-gray-300;
+}
+
+.prose pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto;
+}
+
+.card {
+  @apply bg-card border border-border p-6 rounded-lg shadow-md;
+}
+
+.dark .card {
+  @apply bg-gray-800 text-gray-200;
 }
 
