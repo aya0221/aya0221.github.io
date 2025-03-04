@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+import React from 'react'
 
 export default function Home() {
   return (
@@ -36,10 +37,12 @@ export default function Home() {
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground" />
                 </Link>
             </div>
+
             <p className="text-muted-foreground mb-4">
-              Explored dimensional reduction techniques (PCA, TCA) applied to large-scale neural datasets. 
-              Conducted analysis on complex neural patterns, providing insights into brain activity and 
-              computational neuroscience, under the guidance of Prof. Robert C. Froemke.
+              <ul className="list-disc pl-5">
+                <li>Developed and implemented statistical modeling method TCA to decompose high-dimensional neuron-firing data from the paraventricular nucleus (PVN) of mice, identifying structured neural patterns underlying maternal behavior learning</li>
+                <li>Discovered that active maternal learning strengthens neural synchrony and precise temporal firing, demonstrating that oxytocin-related PVN circuits drive adaptive plasticity in social learning</li>
+              </ul>
             </p>
             <div className="flex flex-wrap gap-2">
               {["Statistical Modeling", "PCA", "TCA", "Computational Neuroscience", "Data Analysis", "Dimension Reduction", "Matlab", "Python"].map((tag, tagIndex) => (
@@ -73,16 +76,20 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2">
             {[
               {
-                title: "Neural-Symbolic VQA",
-                description:
-                  "Designed a multi-modal AI system integrating computer vision, NLP, and symbolic reasoning to enhance visual question answering on the Sort-of-CLEVR dataset. Leveraged PyTorch to implement CNNs for image processing and integrated symbolic reasoning to provide interpretable results, improving accuracy and logical consistency.",
+                title: "Neural-Symbolic VQA: Multi-Modal AI with CNN, NLP, and Symbolic Reasoning",
+                description: (
+                  <ul className="list-disc pl-5">
+                    <li>Developed a Neural-Symbolic VQA system, integrating computer vision (CNN), NLP, and Symbolic Reasoning, trained and evaluated on the Sort-of-CLEVR dataset, which includes 10k images and 200k questions.</li>
+                    <li>Achieved accuracy of 88% in relational and 99% in non-relational questions.</li>
+                  </ul>
+                ),
                 tags: ["Multi-Modal", "Computer Vision", "CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Python"],
                 link: "https://github.com/aya0221/Neural-Symbolic-VQA-Sort-of-CLEVR",
               },
               {
-                title: "Object Tracking Under Occlusions",
+                title: "Object Tracking Under Occlusions: CNN Detection with Kalman Prediction",
                 description:
-                  "Built a robust object tracking system combining CNN-based detection and Kalman filters to predict and track occluded objects effectively. Developed using ResNet for feature extraction and applied in scenarios requiring real-time, accurate tracking under challenging visual conditions.",
+                  "Leveraged a pre-trained CNN (ResNet), combined with the MS COCO dataset resulting in accurate tracking of obscured ball trajectories, integrating object detection, classification, and motion prediction using Kalman filter",
                   tags: ["Mathematical Modeling", "Kalman Filter", "Object Tracking", "CNN", "ResNet", "Python"],
                 link: "https://github.com/aya0221/Object-Tracking-Under-Occlusions",
               },
@@ -120,10 +127,10 @@ export default function Home() {
     {[
       {
         role: "Open Source Contributor",
-        company: "Python Typed APIs Project - Supervised by Prof. Kamen Yotov",
+        company: "Python Typed APIs",
         period: "2024 - Present",
         description: [
-          "Developing type-safe Python clients for widely-used services in an open-source project, automating API generation to address gaps in the software development industry.",
+          "Contributing to codes related to Slack API using OpenAPI Generator, supervised by Prof. Kamen Yotov",
         ],
       },
       {
@@ -131,9 +138,8 @@ export default function Home() {
         company: "Neuroscience Kiani Lab, NYU Center for Neural Science",
         period: "2023",
         description: [
-          "Contributed 5k+ eye-tracking data as a subject for the lab's decision-making experiments.",
-          "Developed a DeepDream algorithm using pre-trained CNNs (ResNet/VGG-16) to generate dream-like images, aiming for future use in neural decision-making experiments on primates.",
-          "Gained insights into research methodologies and expanded knowledge of neuroscience.",
+          "Developed DeepDream-based image generation algorithms using CNNs (ResNet/VGG-16) to create structured visual stimuli for primate decision-making experiments, where monkeys learn decision-making through reinforcement learning and reward-driven adaptation",
+          "Contributed 5K+ eye-tracking data points as a subject for human decision-making research",
         ],
       },
       {

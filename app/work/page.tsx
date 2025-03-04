@@ -4,23 +4,33 @@ import { ArrowUpRight, FileText } from 'lucide-react'
 
 const projects = [
   {
-    title: "Dimensional Reduction for Neuron Data",
-    description: "Explored dimensional reduction techniques (PCA, TCA) applied to large-scale neural datasets. Conducted analysis on complex neural patterns, providing insights into brain activity and computational neuroscience.",
+    title: "Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning",
+    description: (
+      <ul className="list-disc pl-5">
+        <li>Developed and implemented statistical modeling method TCA to decompose high-dimensional neuron-firing data from the paraventricular nucleus (PVN) of mice, identifying structured neural patterns underlying maternal behavior learning</li>
+        <li>Discovered that active maternal learning strengthens neural synchrony and precise temporal firing, demonstrating that oxytocin-related PVN circuits drive adaptive plasticity in social learning</li>
+      </ul>
+    ),
     images: ["/images/thesis_demo.jpg", "/images/thesis_demo_paper1.jpg"],
     tags: ["Statistical Modeling", "PCA", "TCA", "Computational Neuroscience", "Data Analysis", "Dimension Reduction", "Matlab", "Python"],
     link: "https://aya0221.github.io/thesis-pdf/thesis_ayaoshima.pdf",
     isPdf: true,
   },
   {
-    title: "Neural-Symbolic VQA",
-    description: "Designed a multi-modal AI system integrating computer vision, NLP, and symbolic reasoning to enhance visual question answering on the Sort-of-CLEVR dataset. Achieved high accuracy in both relational and non-relational questions.",
+    title: "Neural-Symbolic VQA: Multi-Modal AI with CNN, NLP, and Symbolic Reasoning",
+    description: (
+      <ul className="list-disc pl-5">
+        <li>Developed a Neural-Symbolic VQA system, integrating computer vision (CNN), NLP, and Symbolic Reasoning, trained and evaluated on the Sort-of-CLEVR dataset, which includes 10k images and 200k questions.</li>
+        <li>Achieved accuracy of 88% in relational and 99% in non-relational questions.</li>
+      </ul>
+    ),
     images: ["/images/vqa_demophoto.jpg", "/images/vqa_techphoto.jpg"],
     tags: ["Multi-Modal", "Computer Vision", "CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Python"],
     link: "https://github.com/aya0221/Neural-Symbolic-VQA-Sort-of-CLEVR",
   },
   {
-    title: "Object Tracking Under Occlusions",
-    description: "Built a robust object tracking system combining CNN-based detection and Kalman filters to predict and track occluded objects effectively. Developed using ResNet for feature extraction, enabling accurate tracking under challenging conditions.",
+    title: "Object Tracking Under Occlusions: CNN Detection with Kalman Prediction",
+    description: "Leveraged a pre-trained CNN (ResNet), combined with the MS COCO dataset resulting in accurate tracking of obscured ball trajectories, integrating object detection, classification, and motion prediction using Kalman filter",
     // Replace the MP4 path with your YouTube URL
     video: "https://youtu.be/JBDR8HqBnNg",
     tags: ["Mathematical Modeling", "Kalman Filter", "Object Tracking", "CNN", "ResNet", "Python"],

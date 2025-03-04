@@ -12,7 +12,7 @@ export default function AboutPage() {
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
                 I'm an AI engineer passionate about machine learning and computational neuroscience. 
-                I hold an MS in Computer Science from NYU's Tandon School of Engineering, where I focused on <u>natural language processing</u>, <u>computer vision</u>, and <u>computational neuroscience</u>.
+                I hold an MS in Computer Science from NYU's Tandon School of Engineering, where I focused on <u>Natural Language Processing (NLP)</u>, <u>Computer Vision</u>, and <u>Computational Neuroscience</u>.
               </p>
               <p>
                 I specialize in building data-driven solutions that bridge research and real-world impact. 
@@ -135,7 +135,7 @@ export default function AboutPage() {
                   <strong>Thesis:</strong> <span className="font-semibold italic">Dimensional Reduction Techniques for Neural Data</span>
                 </li>
                 <li>
-                  Supervised by Prof. Robert C. Froemke, focusing on computational neuroscience neural data modeling at <span className="text-purple-700">NYU Grossman School of Medicine's Neuroscience Institute</span>
+                  Supervised by Prof. Robert C. Froemke, focusing on statistical modelings on behavior learning at <span className="text-purple-700">NYU Grossman School of Medicine's Neuroscience Institute</span>
                 </li>
                 <li>
                   <strong>Coursework:</strong> Machine Learning, Artificial Intelligence, Discrete Mathematics, Operating Systems, Big Data, Software Engineering, Information Security and Privacy, Data Structures and Algorithms, NeuroInformatics
