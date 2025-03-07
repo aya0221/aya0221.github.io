@@ -8,14 +8,11 @@ export default function Home() {
       <div className="container space-y-32">
         {/* Hero Section */}
         <section className="max-w-4xl">
-          <h1 className="text-6xl font-bold mb-8">
-            Hi! I'm <span className="gradient-text">Aya Oshima</span>, 
-            an AI engineer based in New York.
+          <h1 className="text-6xl font-bold mb-8 leading-tight">
+            Hi! I'm <span className="gradient-text">Aya Oshima</span>,
+            <br />
+            an AI engineer based in NYC
           </h1>
-          {/* <p className="text-xl text-muted-foreground">
-            I specialize in Machine Learning, Data Science, and Robotics. Currently pursuing my MS in Computer Science at NYU.
-            Focused on creating innovative AI solutions and pushing the boundaries of technology.
-          </p> */}
         </section>
         {/* Featured Work */}
         <section className="space-y-8">
@@ -27,7 +24,7 @@ export default function Home() {
           <div className="flex-1">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-xl font-semibold">
-                Thesis: Dimensional Reduction Techniques for Neural Data
+                Thesis: Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning
               </h3>
               <Link
                   href="https://aya0221.github.io/thesis-pdf/thesis_ayaoshima.pdf"
@@ -76,14 +73,14 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2">
             {[
               {
-                title: "Neural-Symbolic VQA: Multi-Modal AI with CNN, NLP, and Symbolic Reasoning",
+                title: "Neural-Symbolic VQA: Multi-Modal AI with NLP, Computer Vision, and Symbolic Reasoning",
                 description: (
                   <ul className="list-disc pl-5">
                     <li>Developed a Neural-Symbolic VQA system, integrating computer vision (CNN), NLP, and Symbolic Reasoning, trained and evaluated on the Sort-of-CLEVR dataset, which includes 10k images and 200k questions.</li>
                     <li>Achieved accuracy of 88% in relational and 99% in non-relational questions.</li>
                   </ul>
                 ),
-                tags: ["Multi-Modal", "Computer Vision", "CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Python"],
+                tags: ["Multi-Modal", "NLP", "Computer Vision", "CNN", "PyTorch", "Symbolic Reasoning", "Python"],
                 link: "https://github.com/aya0221/Neural-Symbolic-VQA-Sort-of-CLEVR",
               },
               {
@@ -125,16 +122,16 @@ export default function Home() {
   <h2 className="text-2xl font-semibold">Experience</h2>
   <div className="space-y-12">
     {[
+      // {
+      //   role: "Open Source Contributor",
+      //   company: "Python Typed APIs",
+      //   period: "2024 - Present",
+      //   description: [
+      //     "Contributing to codes related to Slack API using OpenAPI Generator, supervised by Prof. Kamen Yotov",
+      //   ],
+      // },
       {
-        role: "Open Source Contributor",
-        company: "Python Typed APIs",
-        period: "2024 - Present",
-        description: [
-          "Contributing to codes related to Slack API using OpenAPI Generator, supervised by Prof. Kamen Yotov",
-        ],
-      },
-      {
-        role: "Research Assistant",
+        role: "AI Neuroscience Researcher",
         company: "Neuroscience Kiani Lab, NYU Center for Neural Science",
         period: "2023",
         description: [

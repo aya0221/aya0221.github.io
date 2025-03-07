@@ -11,12 +11,10 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold">About Me</h1>
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
-                I'm an AI engineer passionate about machine learning and computational neuroscience. 
-                I hold an MS in Computer Science from NYU's Tandon School of Engineering, where I focused on <u>Natural Language Processing (NLP)</u>, <u>Computer Vision</u>, and <u>Computational Neuroscience</u>.
+              Industry-experienced Machine Learning engineer with an MS in Computer Science, specializing in <u>NLP</u>, <u>Computer Vision</u>, and data-driven decision-making. Worked as an AI Robotics Engineer, implemented an end-to-end robot motion system showcased to 10k+ visitors at the exhibition, which was the integration from voice-to-text, through text-to-command mapping, to motion execution, and also conducted extensive NLP research.
               </p>
               <p>
-                I specialize in building data-driven solutions that bridge research and real-world impact. 
-                My work combines technical expertise with a deep curiosity for solving challenging problems at the intersection of AI and human cognition/ability.
+              In academics, applied advanced <u>Statistical Modeling</u> to neural data, achieving <u>dimensionality reduction and feature extraction</u>, contributing to neuroscience research.
               </p>
             </div>
           </div>
@@ -33,45 +31,29 @@ export default function AboutPage() {
 
         {/* Skills & Technologies Section */}
         <section className="space-y-8">
-          <h2 className="text-2xl font-semibold">Skills & Technologies</h2>
+          <h2 className="text-2xl font-semibold">Skills</h2>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
                 category: "Programming Languages",
-                skills: ["Python", "MATLAB", "SQL", "C++"],
+                skills: ["Python", "MATLAB",  "C++", "SQL"],
               },
               {
-                category: "Artificial Intelligence",
+                category: "ML / DS",
                 skills: [
                   "Multi-Modal",
                   "NLP",
-                  "CNNs",
+                  "Statistical Modeling (PCA, TCA)",
                   "Computer Vision",
+                  "CNNs",
                   "Computational Neuroscience",
                   "RNNs",
                   "Reinforcement Learning",
-                  "GANs",
-                  "Time-Series Analysis",
-                ],
-              },
-              {
-                category: "ML/DS Tools & Frameworks",
-                skills: [
-                  "TensorFlow",
-                  "PyTorch",
-                  "Keras",
-                  "Scikit-learn",
-                  "Pandas",
-                  "NumPy",
-                  "SciPy",
-                  "Matplotlib",
-                  "MeCab",
                 ],
               },
               {
                 category: "ML Algorithms",
                 skills: [
-                  "Statistical Modeling (PCA, TCA)",
                   "SVM",
                   "Random Forests",
                   "Decision Trees",
@@ -82,27 +64,51 @@ export default function AboutPage() {
                 ],
               },
               {
-                category: "Neuroscience & Brain-Computer Interfaces",
+                category: "Software Skills",
                 skills: [
-                  "EEG Signal Analysis",
-                  "Neural Decoding",
-                  "Brain Signal Processing",
-                ],
-              },
-              {
-                category: "Development Tools & Methodologies",
-                skills: [
-                  "Git",
-                  "Docker",
-                  "AWS",
-                  "Hadoop",
+                  "TensorFlow",
+                  "PyTorch",
+                  "Keras",
+                  "Scikit-learn",
+                  "NumPy",
+                  "SciPy",
+                  "Pandas",
+                  "Matplotlib",
+                  "Jupyter Notebook",
                   "Apache Spark",
+                  "Hadoop",
+                  "AWS",
+                  "Docker",
+                  "Git",
                   "Linux",
                   "CI/CD (Travis CI)",
                   "Scrum",
                   "Agile"
+                ]
+              },
+              {
+                category: "Neuroscience / BCI / HCI",
+                skills: [
+                  "Computational Neuroscience",
+                  "Neural Decoding",
+                  "Neural Data Analysis",
+                  "EEG Signal Analysis"
                 ],
               },
+              // {
+              //   category: "ML/DS Tools & Frameworks",
+              //   skills: [
+              //     "TensorFlow",
+              //     "PyTorch",
+              //     "Keras",
+              //     "Scikit-learn",
+              //     "Pandas",
+              //     "NumPy",
+              //     "SciPy",
+              //     "Matplotlib",
+              //     "MeCab",
+              //   ],
+              // },              
             ].map((category, index) => (
               <div key={index} className="p-4 rounded-lg bg-muted hover-lift">
                 <h3 className="font-medium mb-2">{category.category}</h3>
@@ -115,57 +121,40 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
-
         {/* Education Section */}
         <section>
-          <h2 className="text-2xl font-semibold">Education</h2>
+          <h2 className="text-2xl font-bold border-b pb-2 mb-6">Education</h2>
           <div className="space-y-6">
-            {/* Education Item */}
+            {/* Master's Degree */}
             <div>
-              {/* Flex container for degree and dates */}
               <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                 <div>
-                  <h3 className="text-xl font-semibold">Master's in Computer Science</h3>
+                  <h3 className="text-xl font-bold">Master of Science in Computer Science</h3>
                   <p className="text-primary">New York University, Tandon School of Engineering</p>
                 </div>
-                <p className="text-muted-foreground mt-2 md:mt-0">2022 - 2024</p>
+                <p className="text-muted-foreground mt-2 md:mt-0">2022 – 2024</p>
               </div>
-              <ul className="pl-6 text-muted-foreground space-y-2 mt-4">
-                <li>
-                  <strong>Thesis:</strong> <span className="font-semibold italic">Dimensional Reduction Techniques for Neural Data</span>
-                </li>
-                <li>
-                  Supervised by Prof. Robert C. Froemke, focusing on statistical modelings on behavior learning at <span className="text-purple-700">NYU Grossman School of Medicine's Neuroscience Institute</span>
-                </li>
-                <li>
-                  <strong>Coursework:</strong> Machine Learning, Artificial Intelligence, Discrete Mathematics, Operating Systems, Big Data, Software Engineering, Information Security and Privacy, Data Structures and Algorithms, NeuroInformatics
-                </li>
-              </ul>
+              <div className="mt-4 space-y-2 text-muted-foreground pl-6"> {/* Added left padding */}
+                <p>
+                  <strong>Thesis:</strong> <span className="italic font-medium">Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning</span>
+                </p>
+                <p className="text-purple-700 font-medium">
+                  Research at NYU Grossman School of Medicine's Neuroscience Institute
+                </p>
+                <p>Supervised by Prof. Robert C. Froemke, focusing on Neural Decoding and Statistical Modeling in behavioral learning.</p>
+              </div>
             </div>
-            {/* Add more education items here if needed */}
           </div>
         </section>
 
+
         {/* Activities & Leadership Section */}
         <section>
-          <h2 className="text-2xl font-semibold">Activities & Leadership</h2>
-          <ul className="pl-6 text-muted-foreground space-y-4">
-            <li className="flex flex-col md:flex-row md:justify-between">
-              <div>
-                <strong>NYU Cheerleading Club:</strong> Member of the Spirit Squad, representing NYU at various events
-              </div>
-              {/* Placeholder for dates or additional info */}
-            </li>
-            <li className="flex flex-col md:flex-row md:justify-between">
-              <div>
-                <strong>NYU Women in Mindfulness Fellowship:</strong> Engaged in mindfulness practices to promote well-being and focus
-              </div>
-            </li>
-            <li className="flex flex-col md:flex-row md:justify-between">
-              <div>
-                <strong>NYU ML Club:</strong> Participated in workshops and discussions on Machine Learning
-              </div>
-            </li>
+          <h2 className="text-2xl font-bold border-b pb-2 mb-6">Activities & Leadership</h2>
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <li><strong>NYU Cheerleading Club</strong></li>
+            <li><strong>NYU Women in Mindfulness Fellowship</strong></li>
+            <li><strong>NYU ML Club</strong></li>
           </ul>
         </section>
 

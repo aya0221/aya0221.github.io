@@ -11,7 +11,7 @@ const projects = [
         <li>Discovered that active maternal learning strengthens neural synchrony and precise temporal firing, demonstrating that oxytocin-related PVN circuits drive adaptive plasticity in social learning</li>
       </ul>
     ),
-    images: ["/images/thesis_demo.jpg", "/images/thesis_demo_paper1.jpg"],
+    images: ["/images/thesis_demo_paper1.jpg", "/images/thesis_demo.jpg"],
     tags: ["Statistical Modeling", "PCA", "TCA", "Computational Neuroscience", "Data Analysis", "Dimension Reduction", "Matlab", "Python"],
     link: "https://aya0221.github.io/thesis-pdf/thesis_ayaoshima.pdf",
     isPdf: true,
@@ -24,8 +24,9 @@ const projects = [
         <li>Achieved accuracy of 88% in relational and 99% in non-relational questions.</li>
       </ul>
     ),
-    images: ["/images/vqa_demophoto.jpg", "/images/vqa_techphoto.jpg"],
-    tags: ["Multi-Modal", "Computer Vision", "CNN", "NLP", "PyTorch", "Symbolic Reasoning", "Python"],
+    // images: ["/images/vqa_demophoto.jpg", "/images/vqa_techphoto.jpg"],
+    images: ["/images/vqa_demophoto.jpg"],
+    tags: ["Multi-Modal", "NLP", "Computer Vision", "CNN", "PyTorch", "Symbolic Reasoning", "Python"],
     link: "https://github.com/aya0221/Neural-Symbolic-VQA-Sort-of-CLEVR",
   },
   {
