@@ -18,8 +18,8 @@ const categories = [
     subcategories: ["Statistics", "Probability", "Others"],
   },
   {
-    title: "Data Structure/Coding",
-    subcategories: ["Theory", "Leetcodes", "Others"],
+    title: "DSA",
+    subcategories: ["Sorting"],
   },
   {
     title: "Computational Neuroscience",
@@ -117,6 +117,33 @@ const posts = [
     category: "Computational Neuroscience",
     tags: ["Computational Neuroscience", "Data Science", "Statistical Modeling on Neuron Data"],
   },
+  {
+    title: "Selection Sort",
+    date: "2025-03-07",
+    excerpt:
+      "",
+    slug: "sorting/selection-sort",
+    category: "DSA",
+    tags: ["Sorting", "Selection Sort"],
+  },
+  {
+    title: "Bubble Sort",
+    date: "2025-03-07",
+    excerpt:
+      "",
+    slug: "sorting/bubble-sort",
+    category: "DSA",
+    tags: ["Sorting", "Bubble Sort"],
+  },
+  {
+    title: "Insertion Sort",
+    date: "2025-03-07",
+    excerpt:
+      "",
+    slug: "sorting/insertion-sort",
+    category: "DSA",
+    tags: ["Sorting", "Insertion Sort"],
+  }
 ]
 
 export default function BlogPage() {
