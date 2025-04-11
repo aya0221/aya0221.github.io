@@ -106,7 +106,7 @@ export function Footer() {
         </div>
 
         {/* Footer Text */}
-        <p className="text-green-500 font-bold text-xs sm:text-sm">© AYAOSHIMA 2024</p>
+        <p className="text-green-500 font-bold text-xs sm:text-sm">© AYAOSHIMA 2025</p>
       </div>
 
       {/* Chatbox Modal */}

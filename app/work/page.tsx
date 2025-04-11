@@ -7,8 +7,8 @@ const projects = [
     title: "Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning",
     description: (
       <ul className="list-disc pl-5">
-        <li>Developed and implemented statistical modeling method TCA to decompose high-dimensional neuron-firing data from the paraventricular nucleus (PVN) of mice, identifying structured neural patterns underlying maternal behavior learning</li>
-        <li>Discovered that active maternal learning strengthens neural synchrony and precise temporal firing, demonstrating that oxytocin-related PVN circuits drive adaptive plasticity in social learning</li>
+        <li>Developed and implemented <strong>statistical modeling</strong> method <strong>TCA</strong> to decompose high-dimensional neuron-firing data from the paraventricular nucleus (PVN) of mice, identifying structured neural patterns underlying maternal behavior learning</li>
+        <li>Discovered that active maternal learning strengthens <strong>neural synchrony</strong> and <strong>precise temporal firing</strong>, demonstrating that <strong>oxytocin-related PVN circuits</strong> drive adaptive plasticity in social learning</li>
       </ul>
     ),
     images: ["/images/thesis_demo_paper1.jpg", "/images/thesis_demo.jpg"],
@@ -17,27 +17,46 @@ const projects = [
     isPdf: true,
   },
   {
+    title: "Voice AI Workout Assistant: Real-Time NLP System with ASR, NLU, and Search",
+    description: (
+      <ul className="list-disc pl-5">
+        <li>Built a <strong>production-grade voice AI assistant</strong> that transcribes, parses, and recommends personalized workouts from natural voice queries.</li>
+        <li>Fine-tuned a <strong>DistilBERT</strong>-based intent classifier and developed <strong>hybrid NER</strong> using <strong>spaCy rules</strong> and <strong>fallback logic</strong>.</li>
+        <li>Designed <strong>OpenSearch</strong> query boosting and built a <strong>React + FastAPI</strong> full-stack interface for real-time UX.</li>
+      </ul>
+    ),
+    video: "https://youtu.be/GDH2nT_EzUI",
+    tags: [
+      "Whisper", "ASR", "DistilBERT", "Intent Classification",
+      "NER", "spaCy", "OpenSearch", "FastAPI", "React", "Python"
+    ],
+    link: "https://github.com/aya0221/voice-nlp-workout-assistant",
+  },
+  {
     title: "Neural-Symbolic VQA: Multi-Modal AI with CNN, NLP, and Symbolic Reasoning",
     description: (
       <ul className="list-disc pl-5">
-        <li>Developed a Neural-Symbolic VQA system, integrating computer vision (CNN), NLP, and Symbolic Reasoning, trained and evaluated on the Sort-of-CLEVR dataset, which includes 10k images and 200k questions.</li>
-        <li>Achieved accuracy of 88% in relational and 99% in non-relational questions.</li>
+        <li>Developed a <strong>Neural-Symbolic VQA system</strong>, integrating <strong>computer vision (CNN)</strong>, <strong>NLP</strong>, and <strong>Symbolic Reasoning</strong>, trained and evaluated on the <strong>Sort-of-CLEVR dataset</strong>, which includes 10k images and 200k questions.</li>
+        <li>Achieved accuracy of <strong>88%</strong> in relational and <strong>99%</strong> in non-relational questions.</li>
       </ul>
     ),
-    // images: ["/images/vqa_demophoto.jpg", "/images/vqa_techphoto.jpg"],
     images: ["/images/vqa_demophoto.jpg"],
     tags: ["Multi-Modal", "NLP", "Computer Vision", "CNN", "PyTorch", "Symbolic Reasoning", "Python"],
     link: "https://github.com/aya0221/Neural-Symbolic-VQA-Sort-of-CLEVR",
   },
   {
     title: "Object Tracking Under Occlusions: CNN Detection with Kalman Prediction",
-    description: "Leveraged a pre-trained CNN (ResNet), combined with the MS COCO dataset resulting in accurate tracking of obscured ball trajectories, integrating object detection, classification, and motion prediction using Kalman filter",
-    // Replace the MP4 path with your YouTube URL
+    description: (
+      <p>
+        Leveraged a <strong>pre-trained CNN (ResNet)</strong>, combined with the <strong>MS COCO dataset</strong>, resulting in accurate tracking of <strong>obscured ball trajectories</strong>, integrating <strong>object detection</strong>, <strong>classification</strong>, and <strong>motion prediction using Kalman filter</strong>.
+      </p>
+    ),
     video: "https://youtu.be/JBDR8HqBnNg",
     tags: ["Mathematical Modeling", "Kalman Filter", "Object Tracking", "CNN", "ResNet", "Python"],
     link: "https://github.com/aya0221/Object-Tracking-Under-Occlusions",
   },
 ]
+
 
 export default function WorkPage() {
   return (
@@ -98,16 +117,13 @@ export default function WorkPage() {
                       return (
                         <iframe
                           key={imgIndex}
-                          width="800"
-                          height="450"
                           src={embedUrl}
                           title={`${project.title} YouTube video`}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
-                          className="w-full h-auto rounded-lg shadow-md object-cover"
-                          style={{ maxHeight: '400px' }}
-                        ></iframe>
+                          className="w-full h-full flex-1 rounded-lg shadow-md object-cover"
+                        />
                       );
                     } else if (media.endsWith('.mp4')) {
                       return (

@@ -31,10 +31,11 @@ export function Navigation() {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-4 lg:gap-8">
           {[
+            ["home", "/"],
             ["about", "/about"],
             ["work", "/work"],
-            ["blog", "/blog"],
-            ["video", "/video"],
+            // ["blog", "/blog"],
+            // ["video", "/video"],
           ].map(([label, path]) => (
             <Link
               key={path}
@@ -55,10 +56,11 @@ export function Navigation() {
           <nav className="absolute top-full left-0 right-0 bg-background md:hidden">
             <div className="container py-4 space-y-4">
               {[
+                ["home", "/"],
                 ["about", "/about"],
                 ["work", "/work"],
-                ["blog", "/blog"],
-                ["video", "/video"],
+                // ["blog", "/blog"],
+                // ["video", "/video"],
               ].map(([label, path]) => (
                 <Link
                   key={path}
