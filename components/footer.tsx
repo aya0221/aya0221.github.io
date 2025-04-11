@@ -80,7 +80,7 @@ export function Footer() {
           </Link>
 
           {/* AyaChatBot Link */}
-          <Link
+          {/* <Link
             href="https://aya-i2ad0xrl3-ao2368-nyuedus-projects.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export function Footer() {
             title="ChatBot"
           >
             <MessageSquare className="h-6 sm:h-10 w-6 sm:w-10" />
-          </Link>
+          </Link> */}
           
           
 
