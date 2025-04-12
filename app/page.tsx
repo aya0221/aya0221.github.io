@@ -42,7 +42,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold">Voice AI Workout Assistant</h3>
                   <p className="text-sm text-muted-foreground">Real-time NLP system with ASR, hybrid NLU, and personalized search</p>
                 </div>
-                <Link href="https://github.com/aya0221/voice-nlp-workout-assistant" target="_blank">
+                <Link href="https://github.com/aya0221/Voice-AI-Workout-Assistant" target="_blank">
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground hover:text-primary" />
                 </Link>
               </div>

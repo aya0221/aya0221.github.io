@@ -30,7 +30,7 @@ const projects = [
       "Whisper", "ASR", "DistilBERT", "Intent Classification",
       "NER", "spaCy", "OpenSearch", "FastAPI", "React", "Python"
     ],
-    link: "https://github.com/aya0221/voice-nlp-workout-assistant",
+    link: "https://github.com/aya0221/Voice-AI-Workout-Assistant",
   },
   {
     title: "Neural-Symbolic VQA: Multi-Modal AI with CNN, NLP, and Symbolic Reasoning",
