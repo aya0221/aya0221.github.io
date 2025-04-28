@@ -151,7 +151,7 @@ As a technical initiative, I built a <strong>low-latency voice-to-NLP recommende
               <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/GDH2nT_EzUI"
+                  src="https://youtu.be/EcXSCofSh-E"
                   title="Voice AI Workout Assistant Demo"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
