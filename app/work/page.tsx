@@ -23,7 +23,7 @@ const projects = [
     title: "Low-Latency Voice-to-NLP Recommender: Real-Time ASR, NLP/NLU, and Neural Search",
     description: (
       <ul className="list-disc pl-5">
-        <li>Built a <strong>production-grade voice AI system</strong> that transcribes natural speech and delivers real-time personalized workout recommendations with <strong>&lt;950ms end-to-end latency</strong>.</li>
+        <li>Built a <strong>production-grade voice AI system</strong> that transcribes natural speech and delivers real-time personalized workout recommendations with <strong>&lt;0.2s end-to-end latency</strong>.</li>
         <li>Fine-tuned <strong>DistilBERT</strong> achieving <strong>97.8% intent classification accuracy</strong> (top-1) and fine-tuned a <strong>RoBERTa-based spaCy Transformer NER model</strong> reaching <strong>98.5% macro-averaged F1-score</strong> on noisy ASR-transcribed input.</li>
         <li>Optimized <strong>OpenSearch retrieval</strong> with custom boosting strategies to maximize relevance and responsiveness for natural voice queries.</li>
         <li>Built a scalable, asynchronous <strong>FastAPI</strong> backend and a lightweight <strong>React</strong> frontend optimized for instant voice query interaction.</li>

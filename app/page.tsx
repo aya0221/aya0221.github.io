@@ -73,7 +73,7 @@ export default function Home() {
             <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
               <li>Built real-time pipelines integrating Whisper ASR, DistilBERT, RoBERTa spaCy NER, OpenSearch semantic ranking</li>
               <li>Achieved 100% intent accuracy, 99.97% F1 entity extraction</li>
-              <li>Delivered recommendations in &lt;1s latency</li>
+              <li>Delivered recommendations in &lt;0.2s latency</li>
             </ul>
           </div>
 
@@ -139,7 +139,7 @@ As a technical initiative, I built a <strong>low-latency voice-to-NLP recommende
                 </Link>
               </div>
               <ul className="list-disc pl-5 text-muted-foreground text-sm">
-                <li>Engineered a real-time AI system that listens, understands, and recommends workouts instantly with <strong>&lt;1s total latency</strong>.</li>
+                <li>Engineered a real-time AI system that listens, understands, and recommends workouts instantly with <strong>&lt;0.2s total latency</strong>.</li>
                 <li>Fine-tuned transformer models to achieve <strong>97.8% intent classification accuracy</strong> and <strong>98.5% entity extraction F1</strong> on noisy ASR-transcribed input.</li>
                 <li>Designed an end-to-end scalable backend with OpenSearch boosting, FastAPI, and React for seamless low-latency experience.</li>
               </ul>
