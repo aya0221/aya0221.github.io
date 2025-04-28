@@ -149,15 +149,15 @@ As a technical initiative, I built a <strong>low-latency voice-to-NLP recommende
                 ))}
               </div>
               <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://youtu.be/EcXSCofSh-E"
-                  title="Voice AI Workout Assistant Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/EcXSCofSh-E"
+                title="Voice AI Workout Assistant Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
             </div>
 
             {/* Thesis Project */}

@@ -30,7 +30,7 @@ const projects = [
         <li>Systematically tracked model training, evaluation metrics, and deployment iterations with <strong>MLflow</strong>, ensuring reproducibility and experiment management.</li>
       </ul>
     ),
-    video: "https://videoId.be/GDH2nT_EzUI",
+    video: "https://www.youtube.com/embed/GDH2nT_EzUI",
     tags: [
       "Whisper", "ASR", "DistilBERT", "Intent Classification",
       "NER", "spaCy", "OpenSearch", "FastAPI", "React", "Python"
