@@ -148,16 +148,35 @@ As a technical initiative, I built a <strong>low-latency voice-to-NLP recommende
                   <span key={tag} className="px-3 py-1 rounded-full bg-muted text-muted-foreground">{tag}</span>
                 ))}
               </div>
-              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/EcXSCofSh-E"
-                title="Voice AI Workout Assistant Demo"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md relative group">
+                <Link
+                  href="https://youtu.be/EcXSCofSh-E"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                >
+                  <Image
+                    src="https://img.youtube.com/vi/EcXSCofSh-E/hqdefault.jpg"
+                    alt="Voice AI Workout Assistant Demo"
+                    width={800}
+                    height={450}
+                    className="object-cover w-full h-full"
+                  />
+                  {/* Play Icon Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-black bg-opacity-50 rounded-full p-3 group-hover:bg-opacity-70 transition">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-10 w-10 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </div>
             </div>
 
             {/* Thesis Project */}

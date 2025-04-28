@@ -120,15 +120,21 @@ export default function WorkPage() {
                         media.split("/").pop();
                       const embedUrl = `https://www.youtube.com/embed/${videoId}`;
                       return (
-                        <iframe
+                        <Link
                           key={imgIndex}
-                          src={embedUrl}
-                          title={`${project.title} YouTube video`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full flex-1 rounded-lg shadow-md object-cover"
-                        />
+                          href={`https://youtu.be/${videoId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-full h-full"
+                        >
+                          <Image
+                            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                            alt={`${project.title} YouTube thumbnail`}
+                            width={800}
+                            height={600}
+                            className="w-full h-auto rounded-lg shadow-md object-cover"
+                          />
+                        </Link>
                       );
                     } else if (media.endsWith('.mp4')) {
                       return (
