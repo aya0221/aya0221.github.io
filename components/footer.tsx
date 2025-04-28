@@ -5,6 +5,7 @@
 import Link from 'next/link';
 import { Mail, Github, Linkedin, MessageSquare, X, Copy } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { SiHuggingface } from 'react-icons/si';
 
 export function Footer() {
   // State variables for managing popups
@@ -77,6 +78,18 @@ export function Footer() {
             title="LinkedIn"
           >
             <Linkedin className="h-6 sm:h-10 w-6 sm:w-10" />
+          </Link>
+
+          {/* HuggingFace Link */}
+          <Link
+            href="https://huggingface.co/Aya-In-Brooklyn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-400 text-black rounded-full p-4 sm:p-6 hover:bg-yellow-500 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
+            aria-label="Hugging Face"
+            title="Hugging Face"
+          >
+            <SiHuggingface className="h-6 sm:h-10 w-6 sm:w-10" />
           </Link>
 
           {/* AyaChatBot Link */}

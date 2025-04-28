@@ -4,25 +4,30 @@ import { ArrowUpRight, FileText } from 'lucide-react'
 
 const projects = [
   {
-    title: "Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning",
+    title: "Tensor Decomposition and Information-Theoretic Modeling of High-Dimensional Neural Time Series",
     description: (
       <ul className="list-disc pl-5">
-        <li>Developed and implemented <strong>statistical modeling</strong> method <strong>TCA</strong> to decompose high-dimensional neuron-firing data from the paraventricular nucleus (PVN) of mice, identifying structured neural patterns underlying maternal behavior learning</li>
-        <li>Discovered that active maternal learning strengthens <strong>neural synchrony</strong> and <strong>precise temporal firing</strong>, demonstrating that <strong>oxytocin-related PVN circuits</strong> drive adaptive plasticity in social learning</li>
+        <li>Processed PVN neural recordings by <strong>spike sorting</strong>, <strong>event-based binning</strong>, <strong>z-scoring</strong>, and construction of <strong>neuron-time-trial tensors</strong> capturing trial-aligned spike dynamics.</li>
+        <li>Applied <strong>Tensor Component Analysis (TCA)</strong> with <strong>CP-ALS</strong> and <strong>Non-Negative CP</strong> decompositions to extract low-dimensional <strong>neuron</strong>, <strong>time</strong>, and <strong>trial factors</strong>, revealing engagement-modulated latent structures.</li>
+        <li>Estimated effective connectivity using <strong>Transfer Entropy</strong> to model engagement-dependent changes in directional information flow between neurons.</li>
+        <li>Found that <strong>active engagement</strong> significantly enhanced <strong>temporal coordination</strong>, <strong>neural synchrony</strong>, and <strong>trial-to-trial representational stability</strong> in PVN circuits.</li>
+        <li>Built the full modeling pipeline in <strong>MATLAB</strong> and <strong>Python</strong>, integrating <strong>tensor optimization</strong>, <strong>statistical validation</strong>, <strong>smoothing</strong>, and <strong>high-dimensional time series processing</strong>.</li>
       </ul>
     ),
     images: ["/images/thesis_demo_paper1.jpg", "/images/thesis_demo.jpg"],
-    tags: ["Statistical Modeling", "PCA", "TCA", "Computational Neuroscience", "Data Analysis", "Dimension Reduction", "Matlab", "Python"],
+    tags: ["Tensor Decomposition", "TCA", "Time Series Modeling", "Dimensionality Reduction", "Transfer Entropy", "Spike Sorting", "Neural Data Analysis", "MATLAB", "Python", "Computational Modeling", "Statistical Modeling"],
     link: "https://aya0221.github.io/thesis-pdf/thesis_ayaoshima.pdf",
     isPdf: true,
   },
   {
-    title: "Voice AI Workout Assistant: Real-Time NLP System with ASR, NLU, and Search",
+    title: "Low-Latency Voice-to-NLP Recommender: Real-Time ASR, NLP/NLU, and Neural Search",
     description: (
       <ul className="list-disc pl-5">
-        <li>Built a <strong>production-grade voice AI assistant</strong> that transcribes, parses, and recommends personalized workouts from natural voice queries.</li>
-        <li>Fine-tuned a <strong>DistilBERT</strong>-based intent classifier and developed <strong>hybrid NER</strong> using <strong>spaCy rules</strong> and <strong>fallback logic</strong>.</li>
-        <li>Designed <strong>OpenSearch</strong> query boosting and built a <strong>React + FastAPI</strong> full-stack interface for real-time UX.</li>
+        <li>Built a <strong>production-grade voice AI system</strong> that transcribes natural speech and delivers real-time personalized workout recommendations with <strong>&lt;950ms end-to-end latency</strong>.</li>
+        <li>Fine-tuned <strong>DistilBERT</strong> achieving <strong>97.8% intent classification accuracy</strong> (top-1) and fine-tuned a <strong>RoBERTa-based spaCy Transformer NER model</strong> reaching <strong>98.5% macro-averaged F1-score</strong> on noisy ASR-transcribed input.</li>
+        <li>Optimized <strong>OpenSearch retrieval</strong> with custom boosting strategies to maximize relevance and responsiveness for natural voice queries.</li>
+        <li>Built a scalable, asynchronous <strong>FastAPI</strong> backend and a lightweight <strong>React</strong> frontend optimized for instant voice query interaction.</li>
+        <li>Systematically tracked model training, evaluation metrics, and deployment iterations with <strong>MLflow</strong>, ensuring reproducibility and experiment management.</li>
       </ul>
     ),
     video: "https://youtu.be/GDH2nT_EzUI",
@@ -63,7 +68,7 @@ export default function WorkPage() {
     <div className="pt-32 pb-16">
       <div className="container max-w-4xl space-y-16">
         <section className="space-y-8">
-          <h1 className="text-4xl font-bold gradient-text">Machine Learning / Computational Neuroscience</h1>
+          <h1 className="text-4xl font-bold gradient-text">	Works: Machine Learning and Neural Modeling</h1>
           {/* <p className="text-lg text-muted-foreground">
             AI / Machine Mearning / Computational Neuroscience
           </p> */}

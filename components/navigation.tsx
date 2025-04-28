@@ -5,7 +5,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { ModeToggle } from "@/components/mode-toggle"
-import { Menu } from "lucide-react"
+import { Menu, Mail, Github, Linkedin } from "lucide-react"
+import { SiHuggingface } from "react-icons/si" // Import HuggingFace icon separately
 
 export function Navigation() {
   const pathname = usePathname()
@@ -23,19 +24,11 @@ export function Navigation() {
           <span className="logo-extension logo-extension-cpp text-primary">CPP</span>
         </Link>
 
-        {/* Mobile menu button */}
-        <button onClick={toggleMenu} className="md:hidden">
-          <Menu className="w-6 h-6" />
-        </button>
-
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-4 lg:gap-8">
           {[
             ["home", "/"],
-            ["about", "/about"],
             ["work", "/work"],
-            // ["blog", "/blog"],
-            // ["video", "/video"],
           ].map(([label, path]) => (
             <Link
               key={path}
@@ -48,8 +41,56 @@ export function Navigation() {
               {label}
             </Link>
           ))}
+
+          {/* Social icons */}
+          <div className="flex items-center gap-3 pl-6">
+            {/* Mail */}
+            <Link
+              href="mailto:ayaoshima.us@gmail.com"
+              className="bg-green-600 text-white rounded-full p-2 hover:bg-green-700 transition-transform transform hover:scale-110"
+              aria-label="Email"
+            >
+              <Mail className="w-5 h-5" />
+            </Link>
+
+            {/* GitHub */}
+            <Link
+              href="https://github.com/aya0221"
+              target="_blank"
+              className="bg-gray-800 text-white rounded-full p-2 hover:bg-gray-900 transition-transform transform hover:scale-110"
+              aria-label="GitHub"
+            >
+              <Github className="w-5 h-5" />
+            </Link>
+
+            {/* LinkedIn */}
+            <Link
+              href="https://www.linkedin.com/in/ayaoshima"
+              target="_blank"
+              className="bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700 transition-transform transform hover:scale-110"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+            </Link>
+
+            {/* HuggingFace */}
+            <Link
+              href="https://huggingface.co/Aya-In-Brooklyn"
+              target="_blank"
+              className="bg-yellow-400 text-black rounded-full p-2 hover:bg-yellow-500 transition-transform transform hover:scale-110"
+              aria-label="Hugging Face"
+            >
+              <SiHuggingface className="w-5 h-5" />
+            </Link>
+          </div>
+
           <ModeToggle className="text-lg" />
         </nav>
+
+        {/* Mobile menu button */}
+        <button onClick={toggleMenu} className="md:hidden">
+          <Menu className="w-6 h-6" />
+        </button>
 
         {/* Mobile navigation */}
         {isMenuOpen && (
@@ -57,10 +98,7 @@ export function Navigation() {
             <div className="container py-4 space-y-4">
               {[
                 ["home", "/"],
-                ["about", "/about"],
                 ["work", "/work"],
-                // ["blog", "/blog"],
-                // ["video", "/video"],
               ].map(([label, path]) => (
                 <Link
                   key={path}
@@ -84,4 +122,3 @@ export function Navigation() {
     </header>
   )
 }
-
