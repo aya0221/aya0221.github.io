@@ -27,27 +27,60 @@ export default function Home() {
       <div className="container space-y-24">
 
         {/* Hero Section */}
-        <section className="max-w-4xl space-y-6">
-          <h1 className="text-5xl font-bold leading-tight">
-          AI Systems for Humans
-          </h1>
-          <p className="text-muted-foreground text-lg max-w-3xl">
-            I work across <strong>natural language processing (NLP)</strong>, <strong>multi-modal AI</strong>, and <strong>end-to-end ML pipelines</strong>. I care about building AI systems that actually help people — solving real-world problems through reliable modeling, scalable deployment, and measurable performance.
+        <section className="text-center max-w-4xl mx-auto space-y-6">
+          <h1 className="text-5xl font-bold leading-tight">AI Systems for Humans</h1>
+          <p className="text-muted-foreground text-lg">
+            I work across <strong>natural language processing (NLP)</strong>,<br />
+            <strong>multi-modal AI</strong>, and <strong>end-to-end ML pipelines</strong>.<br />
+            I care about building AI systems that actually help people —<br />
+            solving real-world problems through reliable modeling,<br />
+            scalable deployment, and measurable performance.
           </p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button onClick={() => setIsMailOpen(true)} className="px-4 py-2 rounded-lg bg-green-500 text-white font-semibold hover:bg-green-600">Email</button>
-            <Link href="https://github.com/aya0221" target="_blank" className="px-4 py-2 rounded-lg bg-purple-800 text-white font-semibold hover:bg-gray-900">GitHub</Link>
-            <Link href="https://www.linkedin.com/in/ayaoshima" target="_blank" className="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700">LinkedIn</Link>
-            <Link href="https://huggingface.co/Aya-In-Brooklyn" target="_blank" className="px-4 py-2 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-blue-700">Hugging Face</Link>
-            <Link 
-              href="/resume/AyaOshima_Resume.pdf" 
-              target="_blank" 
-              className="px-4 py-2 rounded-lg bg-gray-700 text-white font-semibold hover:bg-gray-900 flex items-center gap-2"
-            >
-              <FileText className="w-4 h-4" />
-              Resume
-            </Link>
-          </div>
+
+
+          {/* <div className="flex flex-wrap gap-3 pt-4">
+  <button 
+    onClick={() => setIsMailOpen(true)} 
+    className="px-5 py-2 rounded-full bg-[#EF476F] text-white font-medium hover:scale-105 transition-transform duration-150 shadow-sm"
+  >
+    Email
+  </button>
+
+  <Link 
+    href="https://github.com/aya0221" 
+    target="_blank" 
+    className="px-5 py-2 rounded-full bg-[#073B4C] text-white font-medium hover:scale-105 transition-transform duration-150 shadow-sm"
+  >
+    GitHub
+  </Link>
+
+  <Link 
+    href="https://www.linkedin.com/in/ayaoshima" 
+    target="_blank" 
+    className="px-5 py-2 rounded-full bg-[#118AB2] text-white font-medium hover:scale-105 transition-transform duration-150 shadow-sm"
+  >
+    LinkedIn
+  </Link>
+
+  <Link 
+    href="https://huggingface.co/Aya-In-Brooklyn" 
+    target="_blank" 
+    className="px-5 py-2 rounded-full bg-[#FFD166] text-black font-medium hover:scale-105 transition-transform duration-150 shadow-sm"
+  >
+    Hugging Face
+  </Link>
+
+  <Link 
+    href="/resume/AyaOshima_Resume.pdf" 
+    target="_blank" 
+    className="px-5 py-2 rounded-full bg-[#06D6A0] text-white font-medium hover:scale-105 transition-transform duration-150 shadow-sm flex items-center gap-2"
+  >
+    <FileText className="w-4 h-4" />
+    Resume
+  </Link>
+</div> */}
+
+
         </section>
 
         {isMailOpen && (
@@ -110,20 +143,31 @@ export default function Home() {
           <div className="grid gap-12 md:grid-cols-[2fr,1fr] items-start">
             <div className="space-y-6 text-lg text-muted-foreground">
             <p>
-  I’m a <strong>Machine Learning Engineer</strong> with hands-on industry experience in <strong>applied AI</strong> and a research background in <strong>computational neuroscience</strong>. My work connects scientific insight with real-world deployment—specializing in <u>natural language processing (NLP)</u>, <u>multi-modal AI</u>, and <u>end-to-end ML systems</u>.
-</p>
+              I’m a <strong>Machine Learning Engineer</strong> with hands-on industry experience in <strong>applied AI</strong> and a research background in <strong>computational neuroscience</strong>. My work connects scientific insight with real-world deployment—specializing in <u>natural language processing (NLP)</u>, <u>multi-modal AI</u>, and <u>end-to-end ML systems</u>.
+            </p>
+                        <p>
+            In industry, as an <strong>AI Robotics Engineer</strong>, I developed and deployed an embedded <strong>voice-to-motion robotics system</strong> showcased to 10K+ exhibition visitors. I implemented the <strong>full AI pipeline</strong>: <u>speech recognition</u>, <u>real-time command mapping using a fine-tuned NLP model</u>, and <u>robotic motion execution</u>—all running on <strong>embedded hardware</strong>, with integrated <u>speech synthesis</u>.
+            </p>
+
             <p>
-In industry, as an <strong>AI Robotics Engineer</strong>, I developed and deployed an embedded <strong>voice-to-motion robotics system</strong> showcased to 10K+ exhibition visitors. I implemented the <strong>full AI pipeline</strong>: <u>speech recognition</u>, <u>real-time command mapping using a fine-tuned NLP model</u>, and <u>robotic motion execution</u>—all running on <strong>embedded hardware</strong>, with integrated <u>speech synthesis</u>.
-</p>
+              In academia, at <strong>NYU Grossman School of Medicine</strong>, I contributed to neuroscience research under Prof. Robert C. Froemke, analyzing hypothalamic neural activity using <strong>Tensor Component Analysis (TCA)</strong>. My work focused on <u>dimensionality reduction</u>, <u>temporal precision</u>, and <u>oxytocin-linked plasticity</u>—revealing population-level neural dynamics underlying maternal learning.
+            </p>
 
-<p>
-  In academia, at <strong>NYU Grossman School of Medicine</strong>, I contributed to neuroscience research under Prof. Robert C. Froemke, analyzing hypothalamic neural activity using <strong>Tensor Component Analysis (TCA)</strong>. My work focused on <u>dimensionality reduction</u>, <u>temporal precision</u>, and <u>oxytocin-linked plasticity</u>—revealing population-level neural dynamics underlying maternal learning.
-</p>
-
-<p>
-As a technical initiative, I built a <strong>low-latency voice-to-NLP recommender system</strong> that transcribes voice input (Whisper ASR), <strong>extracts structured intents and entities</strong>, and retrieves ranked workout classes—delivering real-time personalized recommendations through a scalable FastAPI and React interface. Intent classification accuracy: <strong>100%</strong>. Entity extraction F1-score: <strong>99.97%</strong>. End-to-end latency: under 0.2 srconds.
-</p>
+            <p>
+            As a technical initiative, I built a <strong>low-latency voice-to-NLP recommender system</strong> that transcribes voice input (Whisper ASR), <strong>extracts structured intents and entities</strong>, and retrieves ranked workout classes—delivering real-time personalized recommendations through a scalable FastAPI and React interface. Intent classification accuracy: <strong>100%</strong>. Entity extraction F1-score: <strong>99.97%</strong>. End-to-end latency: under 0.2 srconds.
+            <div className="pt-2">
+              <Link
+                href="/resume/AyaOshima_Resume.pdf"
+                target="_blank"
+                className="text-sm font-medium underline text-black hover:text-gray-800"
+              >
+                See full resume
+              </Link>
             </div>
+            </p>
+
+          </div>
+            
             <div className="relative aspect-square">
               <Image src="/images/ayalogo.jpg" alt="Aya Oshima" width={400} height={400} className="rounded-lg object-cover colorful-border" />
             </div>
@@ -215,11 +259,11 @@ As a technical initiative, I built a <strong>low-latency voice-to-NLP recommende
               </div>
             </div>
           </div>
-          {/* Move See More Works button inside here */}
-          <div className="flex justify-end pt-4">
+                    {/* Move See More Works button inside here */}
+                    <div className="flex justify-end pt-4">
             <Link
               href="/work"
-              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-lg bg-primary text-white hover:bg-primary/90 transition"
+              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-lg bg-gradient-to-r from-purple-100 via-gray-200 to-gray-200 text-gray-800 hover:from-gray-300 hover:to-gray-300 transition-all shadow-sm"
             >
               See More Works
               <ArrowUpRight className="ml-2 w-4 h-4" />
@@ -230,82 +274,87 @@ As a technical initiative, I built a <strong>low-latency voice-to-NLP recommende
         {/* Skills Section */}
         <section className="space-y-8">
           <h2 className="text-3xl font-bold">Skills</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            {/* Machine Learning & Data Science */}
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">ML / Data Science</h3>
-              <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                {["NLP", "Computer Vision", "Multi-Modal Learning", 
-                  "Speech Recognition (Whisper)", "Intent & Entity Recognition", 
-                  "Dimensionality Reduction (PCA, TCA)", "Reinforcement Learning", 
-                  "CNNs", "RNNs", "Transformers", 
-                  "Search Relevance (OpenSearch Boosting)"]
-                .map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-muted rounded-full">{skill}</span>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-sm">
+            {/* Machine Learning */}
+            <div>
+              <h3 className="font-semibold text-base mb-2">Machine Learning</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "NLP", "Computer Vision", "Multi-Modal Learning", "Speech Recognition (Whisper)",
+                  "Intent & Entity Recognition", "Dimensionality Reduction (PCA, TCA)", "Reinforcement Learning",
+                  "RNNs", "Transformers", "Search Relevance (OpenSearch Boosting)"
+                ].map(skill => (
+                  <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
 
-            {/* Libraries & Frameworks */}
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Libraries & Frameworks</h3>
-              <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                {["PyTorch", "TensorFlow", "HuggingFace", "Keras", 
-                  "spaCy", "Scikit-learn", "NumPy", "Pandas", 
-                  "Matplotlib", "Seaborn", "Jupyter", "OpenAPI", "Django", "FastAPI", "React"]
-                .map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-muted rounded-full">{skill}</span>
+            {/* Frameworks */}
+            <div>
+              <h3 className="font-semibold text-base mb-2">Frameworks</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "PyTorch", "TensorFlow", "HuggingFace", "Keras", "spaCy", "Scikit-learn", "NumPy", "Pandas",
+                  "Matplotlib", "Seaborn", "Jupyter", "OpenAPI", "Django", "FastAPI", "React"
+                ].map(skill => (
+                  <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
 
-            {/* ML Algorithms */}
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">ML Algorithms</h3>
-              <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                {["SVM", "Random Forests", "Decision Trees", 
-                  "Logistic Regression", "HMM", "K-means", "Kalman Filters"]
-                .map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-muted rounded-full">{skill}</span>
+            {/* Algorithms */}
+            <div>
+              <h3 className="font-semibold text-base mb-2">Algorithms</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "SVM", "Random Forests", "Decision Trees", "Logistic Regression", "HMM",
+                  "K-means", "Kalman Filters"
+                ].map(skill => (
+                  <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
 
-            {/* MLOps / Infrastructure */}
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">MLOps / Infrastructure</h3>
-              <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                {["Docker", "AWS", "CI/CD", "Git", "Linux", "Apache Spark", "Hadoop"]
-                .map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-muted rounded-full">{skill}</span>
-                ))}
+            {/* Research / Infra */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-semibold text-base mb-2">Neuroscience</h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Computational Neuroscience", "Neural Decoding", "Neural Data Analysis",
+                    "EEG Signal Analysis", "Behavioral Modeling"
+                  ].map(skill => (
+                    <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Core Languages */}
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Programming Languages</h3>
-              <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                {["Python", "MATLAB", "C++", "SQL", "Shell"].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-muted rounded-full">{skill}</span>
-                ))}
+              <div>
+                <h3 className="font-semibold text-base mb-2">MLOps</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Docker", "AWS", "CI/CD", "Git", "Linux", "Apache Spark", "Hadoop"].map(skill => (
+                    <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Neuroscience Expertise */}
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Neuroscience & Research</h3>
-              <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                {["Computational Neuroscience", 
-                  "Neural Decoding", 
-                  "Neural Data Analysis", 
-                  "EEG Signal Analysis", 
-                  "Behavioral Modeling"]
-                .map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-muted rounded-full">{skill}</span>
-                ))}
+              <div>
+                <h3 className="font-semibold text-base mb-2">Languages</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "MATLAB", "C++", "SQL", "Shell"].map(skill => (
+                    <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -314,10 +363,10 @@ As a technical initiative, I built a <strong>low-latency voice-to-NLP recommende
         {/* Education Section */}
         <section className="space-y-4">
           <h2 className="text-3xl font-bold">Education</h2>
-          <div>
-            <h3 className="text-xl">Master's in Computer Science</h3>
-            <p className="text">New York University, Tandon School of Engineering</p>
-            <p>Thesis: <em>Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning</em> conducted under Prof. Robert C. Froemke at NYU Langone.</p>
+          <div className="space-y-1 text-muted-foreground text-base">
+            <p><strong>Master’s in Computer Science</strong>, New York University – Tandon School of Engineering</p>
+            <p><em>Thesis:</em> Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning</p>
+            <p><em>Advisor:</em> Prof. Robert C. Froemke, NYU Langone Health – Neuroscience Institute</p>
           </div>
         </section>
 

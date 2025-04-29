@@ -30,7 +30,7 @@ const projects = [
         <li>Systematically tracked model training, evaluation metrics, and deployment iterations with <strong>MLflow</strong>, ensuring reproducibility and experiment management.</li>
       </ul>
     ),
-    video: "https://www.youtube.com/embed/GDH2nT_EzUI",
+    video: "https://youtu.be/EcXSCofSh-E",
     tags: [
       "Whisper", "ASR", "DistilBERT", "Intent Classification",
       "NER", "spaCy", "OpenSearch", "FastAPI", "React", "Python"
@@ -68,7 +68,8 @@ export default function WorkPage() {
     <div className="pt-32 pb-16">
       <div className="container max-w-4xl space-y-16">
         <section className="space-y-8">
-          <h1 className="text-4xl font-bold gradient-text">	Works: Machine Learning and Neural Modeling</h1>
+          {/* <h1 className="text-4xl font-bold gradient-text">	Works: Machine Learning and Neural Modeling</h1> */}
+          <h1 className="text-4xl font-bold leading-tight">Works: Machine Learning and Neural Modeling</h1>
           {/* <p className="text-lg text-muted-foreground">
             AI / Machine Mearning / Computational Neuroscience
           </p> */}

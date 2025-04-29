@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Mail, Github, Linkedin, MessageSquare, X, Copy } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { SiHuggingface } from 'react-icons/si';
+import { FileText } from "lucide-react"
 
 export function Footer() {
   // State variables for managing popups
@@ -42,84 +43,66 @@ export function Footer() {
   };
 
   return (
-    <footer className="py-8 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+    <footer className="py-8 bg-gradient-to-r from-pink-40 via-orange-5 to-white transition-colors duration-300">
       <div className="container mx-auto px-4 flex flex-col items-center space-y-8">
         {/* Icon Links with Optimized Colors */}
-        <div className="flex flex-wrap justify-center items-center space-x-6 space-y-4 md:space-x-10 md:space-y-0">
-          {/* Mail Icon as a Button */}
-          <button
-            onClick={() => setIsMailOpen(true)}
-            className="bg-green-600 text-white rounded-full p-4 sm:p-6 hover:bg-green-700 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
-            aria-label="Contact via Email"
-            title="Contact via Email"
+        <div className="flex flex-wrap justify-center items-center gap-6">
+          {/* Mail */}
+          <Link
+            href="mailto:ayaoshima.us@gmail.com"
+            className="bg-gradient-to-r from-green-300 to-green-500 text-white rounded-full p-3 hover:scale-110 transition-transform shadow-md"
+            aria-label="Email"
           >
-            <Mail className="h-6 sm:h-10 w-6 sm:w-10" /> 
-          </button>
+            <Mail className="h-6 w-6" />
+          </Link>
 
-          {/* GitHub Link */}
+          {/* GitHub */}
           <Link
             href="https://github.com/aya0221"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-purple-800 text-white rounded-full p-4 sm:p-6 hover:bg-purple-900 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
+            className="bg-gradient-to-r from-gray-600 to-gray-800 text-white rounded-full p-3 hover:scale-110 transition-transform shadow-md"
             aria-label="GitHub"
-            title="GitHub"
           >
-            <Github className="h-6 sm:h-10 w-6 sm:w-10" />
+            <Github className="h-6 w-6" />
           </Link>
 
-          {/* LinkedIn Link */}
+          {/* LinkedIn */}
           <Link
             href="https://www.linkedin.com/in/ayaoshima"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-700 text-white rounded-full p-4 sm:p-6 hover:bg-blue-800 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
+            className="bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-full p-3 hover:scale-110 transition-transform shadow-md"
             aria-label="LinkedIn"
-            title="LinkedIn"
           >
-            <Linkedin className="h-6 sm:h-10 w-6 sm:w-10" />
+            <Linkedin className="h-6 w-6" />
           </Link>
 
-          {/* HuggingFace Link */}
+          {/* HuggingFace */}
           <Link
             href="https://huggingface.co/Aya-In-Brooklyn"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-yellow-400 text-black rounded-full p-4 sm:p-6 hover:bg-yellow-500 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
+            className="bg-gradient-to-r from-yellow-300 to-yellow-400 text-black rounded-full p-3 hover:scale-110 transition-transform shadow-md"
             aria-label="Hugging Face"
-            title="Hugging Face"
           >
-            <SiHuggingface className="h-6 sm:h-10 w-6 sm:w-10" />
+            <SiHuggingface className="h-6 w-6" />
           </Link>
 
-          {/* AyaChatBot Link */}
-          {/* <Link
-            href="https://aya-i2ad0xrl3-ao2368-nyuedus-projects.vercel.app/"
+          {/* Resume Download */}
+          <Link
+            href="/resume/AyaOshima_Resume.pdf"
             target="_blank"
-            rel="noopener noreferrer"
-            className="bg-pink-700 text-white rounded-full p-4 sm:p-6 hover:bg-pink-800 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
-            aria-label="ChatBot"
-            title="ChatBot"
+            className="bg-gradient-to-r from-pink-300 to-purple-300 text-white rounded-full p-3 hover:scale-110 transition-transform shadow-md"
+            aria-label="Resume"
           >
-            <MessageSquare className="h-6 sm:h-10 w-6 sm:w-10" />
-          </Link> */}
-          
-          
-
-
-          {/* DialogFlow Chat Icon */}
-          {/* <button
-            onClick={() => setIsChatOpen(true)}
-            className="bg-pink-500 text-white rounded-full p-4 sm:p-6 hover:bg-pink-600 transition-transform transform hover:scale-110 sm:hover:scale-125 shadow-lg flex items-center justify-center"
-            aria-label="Open Chat"
-            title="Open Chat"
-          >
-            <MessageSquare className="h-6 sm:h-10 w-6 sm:w-10" />
-          </button> */}
+            <FileText className="h-6 w-6" />
+          </Link>
         </div>
 
+
         {/* Footer Text */}
-        <p className="text-green-500 font-bold text-xs sm:text-sm">© AYAOSHIMA 2025</p>
+        <p className="text-sm font-medium bg-gradient-to-r from-pink-400 to-orange-400 text-transparent bg-clip-text">© AYAOSHIMA 2025</p>
       </div>
 
       {/* Chatbox Modal */}
