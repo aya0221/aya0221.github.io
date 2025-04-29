@@ -39,6 +39,14 @@ export default function Home() {
             <Link href="https://github.com/aya0221" target="_blank" className="px-4 py-2 rounded-lg bg-purple-800 text-white font-semibold hover:bg-gray-900">GitHub</Link>
             <Link href="https://www.linkedin.com/in/ayaoshima" target="_blank" className="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700">LinkedIn</Link>
             <Link href="https://huggingface.co/Aya-In-Brooklyn" target="_blank" className="px-4 py-2 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-blue-700">Hugging Face</Link>
+            <Link 
+              href="/AyaOshima_Resume_web.pdf" 
+              target="_blank" 
+              className="px-4 py-2 rounded-lg bg-gray-700 text-white font-semibold hover:bg-gray-900 flex items-center gap-2"
+            >
+              <FileText className="w-4 h-4" />
+              Resume
+            </Link>
           </div>
         </section>
 
