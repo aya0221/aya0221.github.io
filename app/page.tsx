@@ -29,13 +29,12 @@ export default function Home() {
         {/* Hero Section */}
         <section className="text-center max-w-4xl mx-auto space-y-6">
           <h1 className="text-5xl font-bold leading-tight">AI Systems for Humans</h1>
-          <p className="text-muted-foreground text-lg">
-            I work across <strong>natural language processing (NLP)</strong>,<br />
-            <strong>multi-modal AI</strong>, and <strong>end-to-end ML pipelines</strong>.<br />
-            I care about building AI systems that actually help people —<br />
-            solving real-world problems through reliable modeling,<br />
-            scalable deployment, and measurable performance.
+          <p className="text-muted-foreground text-lg text-left max-w-4xl">
+            I work across <strong>natural language processing (NLP)</strong>, <strong>multi-modal AI</strong>, and <strong>end-to-end ML pipelines</strong>.<br />
+            I care about building AI systems that actually help people —
+            solving real-world problems through reliable modeling, scalable deployment, and measurable performance.
           </p>
+
 
 
           {/* <div className="flex flex-wrap gap-3 pt-4">
