@@ -113,7 +113,7 @@ In industry, as an <strong>AI Robotics Engineer</strong>, I developed and deploy
 </p>
 
 <p>
-As a technical initiative, I built a <strong>low-latency voice-to-NLP recommender system</strong> that transcribes voice input (Whisper ASR), <strong>extracts structured intents and entities</strong>, and retrieves ranked workout classes—delivering real-time personalized recommendations through a scalable FastAPI and React interface. Intent classification accuracy: <strong>100%</strong>. Entity extraction F1-score: <strong>99.97%</strong>. End-to-end latency: &lt;0.2s.
+As a technical initiative, I built a <strong>low-latency voice-to-NLP recommender system</strong> that transcribes voice input (Whisper ASR), <strong>extracts structured intents and entities</strong>, and retrieves ranked workout classes—delivering real-time personalized recommendations through a scalable FastAPI and React interface. Intent classification accuracy: <strong>100%</strong>. Entity extraction F1-score: <strong>99.97%</strong>. End-to-end latency: under 0.2 srconds.
 </p>
             </div>
             <div className="relative aspect-square">
