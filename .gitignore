@@ -4,3 +4,5 @@ node_modules/
 *.log
 *.lock
 .env.local
+app/blog/*
+app/page_bkup.tsx
