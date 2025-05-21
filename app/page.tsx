@@ -191,7 +191,7 @@ export default function Home() {
               </div>
               <ul className="list-disc pl-5 text-muted-foreground text-sm">
                 <li>Engineered a real-time AI system that listens, understands, and recommends workouts instantly with <strong>&lt;0.2s total latency</strong>.</li>
-                <li>Fine-tuned transformer models to achieve <strong>97.8% intent classification accuracy</strong> and <strong>98.5% entity extraction F1</strong> on noisy ASR-transcribed input.</li>
+                <li>Fine-tuned transformer models to achieve <strong>100% intent classification accuracy</strong> and <strong>99.97% entity extraction F1</strong>.</li>
                 <li>Designed an end-to-end scalable backend with OpenSearch boosting, FastAPI, and React for seamless low-latency experience.</li>
               </ul>
               <div className="flex flex-wrap gap-2 text-xs">
