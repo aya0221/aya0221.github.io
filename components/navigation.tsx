@@ -93,14 +93,14 @@ export function Navigation() {
             </Link>
 
             {/* Resume */}
-            <Link
+            {/* <Link
               href="/resume/AyaOshima_Resume.pdf"
               target="_blank"
               className="bg-gradient-to-r from-pink-200 to-purple-300 text-white rounded-full p-2 hover:scale-110 transition-transform"
               aria-label="Resume"
             >
               <FileText className="w-5 h-5" />
-            </Link>
+            </Link> */}
 
           </div>
 

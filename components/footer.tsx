@@ -90,14 +90,14 @@ export function Footer() {
           </Link>
 
           {/* Resume Download */}
-          <Link
+          {/* <Link
             href="/resume/AyaOshima_Resume.pdf"
             target="_blank"
             className="bg-gradient-to-r from-pink-300 to-purple-300 text-white rounded-full p-3 hover:scale-110 transition-transform shadow-md"
             aria-label="Resume"
           >
             <FileText className="h-6 w-6" />
-          </Link>
+          </Link> */}
         </div>
 
 
