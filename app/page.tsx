@@ -28,13 +28,21 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-5xl font-bold leading-tight">AI Systems for Humans</h1>
+          <h1 className="text-5xl font-bold leading-tight">Multimodal-AI & NeuroAI</h1>
           <p className="text-muted-foreground text-lg text-left max-w-4xl">
-            I work across <strong>natural language processing (NLP)</strong>, <strong>multi-modal AI</strong>, and <strong>end-to-end ML pipelines</strong>.<br />
-            I care about building AI systems that actually help people —
-            solving real-world problems through reliable modeling, scalable deployment, and measurable performance.
-          </p>
+          <div className="text-muted-foreground text-lg text-left space-y-6">
+            <p>
+              <strong>Welcome to my world. I’m Aya.</strong> 🌸
+            </p>
 
+            <p>
+              Rooted in a deep love for <strong>BCI</strong>, I’ve been growing in the space of <strong>Multimodal AI</strong> and <strong>NeuroAI</strong> —<br />
+              from building embedded AI systems in robotics,
+              to exploring connections between behaviors and neural activity through computational neuroscience.
+            </p>
+          </div>
+          </p>
+        </section>
 
 
           {/* <div className="flex flex-wrap gap-3 pt-4">
@@ -79,9 +87,6 @@ export default function Home() {
   </Link>
 </div> */}
 
-
-        </section>
-
         {isMailOpen && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-sm md:max-w-md p-6 relative">
@@ -105,35 +110,35 @@ export default function Home() {
           </div>
         )}
 
-
-        {/* Three Tech Focus Areas */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-muted p-6 rounded-xl shadow-sm">
-            <h2 className="font-semibold text-lg leading-tight mb-2">Low-Latency Voice-to-NLP Recommendation System<br/><span className="text-sm font-normal text-muted-foreground">Fine-Tuned for Fast, High-Accuracy Personalized Search</span></h2>
-            <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-              <li>Built real-time pipelines integrating Whisper ASR, DistilBERT, RoBERTa spaCy NER, OpenSearch semantic ranking</li>
-              <li>Achieved 100% intent accuracy, 99.97% F1 entity extraction</li>
-              <li>Delivered recommendations in &lt;0.2s latency</li>
-            </ul>
-          </div>
+                  <div className="bg-muted p-6 rounded-xl shadow-sm">
+                    {/* <h2 className="font-semibold text-lg leading-tight mb-2">Low-Latency Voice-to-NLP Recommendation System<br/><span className="text-sm font-normal text-muted-foreground">Fine-Tuned for Fast, High-Accuracy Personalized Search</span></h2> */}
+                    <h2 className="font-semibold text-lg leading-tight mb-2">Real-Time ML<br/><span className="text-sm font-normal text-muted-foreground">recommender system</span></h2>
+                    <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
+                      <li>low latency, high accuracy</li>
+                      <li>built end-to-end, from scratch</li>
+                      <li>fine-tuned few models, incoporating recommendation for first-time-users and existing users</li>
+                      {/* <li>Delivered recommendations in &lt;0.2s latency</li> */}
+                    </ul>
+                  </div>
 
-          <div className="bg-muted p-6 rounded-xl shadow-sm">
-            <h2 className="font-semibold text-lg leading-tight mb-2">Tensor Decomposition on High-Dimensional Neural Firing Data<br/><span className="text-sm font-normal text-muted-foreground">Dimensionality Reduction and Feature Extraction</span></h2>
-            <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-              <li>Applied Tensor Component Analysis (TCA) to PVN spike-train datasets (M.S. Thesis)</li>
-              <li>Extracted engagement-linked latent dynamics</li>
-              <li>Advanced neural decoding of volitional learning</li>
-            </ul>
-          </div>
+                  <div className="bg-muted p-6 rounded-xl shadow-sm">
+                    <h2 className="font-semibold text-lg leading-tight mb-2">NeuroAI<br/><span className="text-sm font-normal text-muted-foreground">neural spike decoding</span></h2>
+                    <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
+                      <li>MS Thesis at med-school neuroscience lab</li>
+                      <li>Engineered statistical modelings</li>
+                      {/* <li>Advanced neural decoding of volitional learning</li> */}
+                    </ul>
+                  </div>
 
-          <div className="bg-muted p-6 rounded-xl shadow-sm">
-            <h2 className="font-semibold text-lg leading-tight mb-2">Embedded AI Deployment in Robotics<br/><span className="text-sm font-normal text-muted-foreground">Voice-to-Text-to-Robot Motion Command Mapping</span></h2>
-            <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-              <li>Built embedded AI system for real-time speech-driven robotic motion</li>
-              <li>Integrated Julius/SRILM speech recognition with NLP parsing</li>
-              <li>Deployed live at 10K+ visitor public exhibition</li>
-            </ul>
-          </div>
+                  <div className="bg-muted p-6 rounded-xl shadow-sm">
+                    <h2 className="font-semibold text-lg leading-tight mb-2">Embedded AI<br/><span className="text-sm font-normal text-muted-foreground">AI in Robotics</span></h2>
+                    <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
+                      <li>Demoed live to 10K+ tech/non-tech people at exihibition</li>
+                      <li>Led AI development and deployment</li>
+                      {/* <li>Deployed live at 10K+ visitor public exhibition</li> */}
+                    </ul>
+                  </div>
         </section>
 
         {/* About Section */}
@@ -142,18 +147,20 @@ export default function Home() {
           <div className="grid gap-12 md:grid-cols-[2fr,1fr] items-start">
             <div className="space-y-6 text-lg text-muted-foreground">
             <p>
-              I’m a <strong>Machine Learning Engineer</strong> with hands-on industry experience in <strong>applied AI</strong> and a research background in <strong>computational neuroscience</strong>. My work connects scientific insight with real-world deployment—specializing in <u>natural language processing (NLP)</u>, <u>multi-modal AI</u>, and <u>end-to-end ML systems</u>.
+              I’m a <strong>Machine Learning Engineer</strong> with hands-on <strong>industry</strong> and <strong>research</strong> experience in applied AI (<strong>NLP, Multimodal, computer vision</strong>), real-time ML system<strong>computational neuroscience</strong>.
             </p>
                         <p>
-            In industry, as an <strong>AI Robotics Engineer</strong>, I developed and deployed an embedded <strong>voice-to-motion robotics system</strong> showcased to 10K+ exhibition visitors. I implemented the <strong>full AI pipeline</strong>: <u>speech recognition</u>, <u>real-time command mapping using a fine-tuned NLP model</u>, and <u>robotic motion execution</u>—all running on <strong>embedded hardware</strong>, with integrated <u>speech synthesis</u>.
+            {/* In industry, as an <strong>ML Robotics Engineer</strong>, I led an embedded AI development (voice-to-motion robotics system), demoed live to 10K+ tech/non-tech people at national exhibition. I implemented the <strong>full AI pipeline</strong>: <u>speech recognition</u>, <u>real-time command mapping using a fine-tuned NLP model</u>, and <u>robotic motion execution</u>—all running on <strong>embedded hardware</strong>, with integrated <u>speech synthesis</u>. */}
             </p>
 
             <p>
-              In academia, at <strong>NYU Grossman School of Medicine</strong>, I contributed to neuroscience research under Prof. Robert C. Froemke, analyzing hypothalamic neural activity using <strong>Tensor Component Analysis (TCA)</strong>. My work focused on <u>dimensionality reduction</u>, <u>temporal precision</u>, and <u>oxytocin-linked plasticity</u>—revealing population-level neural dynamics underlying maternal learning.
+              In academia research, at <strong>NYU Grossman School of Medicine, Neuroscience</strong> lab, I Engineered a statistical model (TCA) to decode PVN neural spike trains. With reducting the dimensionality and extracting the latent features, we revealed condition-dependent neural plasticity.
+  
+
             </p>
 
             <p>
-            As a technical initiative, I built a <strong>low-latency voice-to-NLP recommender system</strong> that transcribes voice input (Whisper ASR), <strong>extracts structured intents and entities</strong>, and retrieves ranked workout classes—delivering real-time personalized recommendations through a scalable FastAPI and React interface. Intent classification accuracy: <strong>100%</strong>. Entity extraction F1-score: <strong>99.97%</strong>. End-to-end latency: under 0.2 srconds.
+            As a technical initiative, I recently built a <strong>real-time recommendation system</strong> that takes and transcribes voice input, extracts intents and entities, and retrieves ranked recommendations, run on scalable FastAPI, React.js, and Docer interface. Intent classification: <strong>99.8%</strong>accuracy. Entity extraction: <strong>99.97%</strong>F1. Achieved <strong>&lt;200ms</strong> E2E latency.
             {/* <div className="pt-2">
               <Link
                 href="/resume/AyaOshima_Resume.pdf"
@@ -190,12 +197,16 @@ export default function Home() {
                 </Link>
               </div>
               <ul className="list-disc pl-5 text-muted-foreground text-sm">
-                <li>Engineered a real-time AI system that listens, understands, and recommends workouts instantly with <strong>&lt;0.2s total latency</strong>.</li>
-                <li>Fine-tuned transformer models to achieve <strong>100% intent classification accuracy</strong> and <strong>99.97% entity extraction F1</strong>.</li>
-                <li>Designed an end-to-end scalable backend with OpenSearch boosting, FastAPI, and React for seamless low-latency experience.</li>
+                {/* <li>Engineered a real-time AI system that listens, understands, and recommends workouts instantly with <strong>&lt;0.2s total latency</strong>.</li>
+                <li>Fine-tuned transformer models to achieve <strong>99.8% intent classification accuracy</strong> and <strong>99.97% entity extraction F1</strong>.</li>
+                <li>Designed an end-to-end scalable backend with OpenSearch boosting, FastAPI, and React for seamless low-latency experience.</li> */}
+                <li>Built end-to-end system with ASR input, intent/entity parsing, and semantic retrieval</li>
+                <li>Achieved &lt;200ms E2E latency (React.js + FastAPI + Docker) </li>
+                <li>Fine-tuned DistilBERT (intent) and RoBERTa-backed spaCy NER (entity), in PyTorch; achieved 99.8% intent accuracy and 99.97% entity F1, tracked via MLflow</li>
+                <li>Implemented cold-start personalization via Bayesian smoothing + MMR reranking</li>
               </ul>
               <div className="flex flex-wrap gap-2 text-xs">
-                {["Whisper", "ASR", "DistilBERT", "RoBERTa", "NER", "spaCy", "OpenSearch", "FastAPI", "React", "Python", "MLflow"].map(tag => (
+                {["NLP", "NLU", "BERT", "Transformer", "MLflow", "ASR", "DistilBERT", "RoBERTa", "spaCy", "Docker","OpenSearch", "FastAPI", "React", "Python"].map(tag => (
                   <span key={tag} className="px-3 py-1 rounded-full bg-muted text-muted-foreground">{tag}</span>
                 ))}
               </div>
@@ -242,13 +253,17 @@ export default function Home() {
                 </Link>
               </div>
               <ul className="list-disc pl-5 text-muted-foreground text-sm">
-                <li>Modeled PVN spike-train recordings by constructing <strong>neuron-time-trial tensors</strong> aligned to <strong>behavioral events</strong>.</li>
+                {/* <li>Modeled PVN spike-train recordings by constructing <strong>neuron-time-trial tensors</strong> aligned to <strong>behavioral events</strong>.</li>
                 <li>Applied <strong>Tensor Component Analysis (TCA)</strong> to decompose <strong>high-dimensional neural activity</strong> into interpretable <strong>latent factors</strong> across <strong>neurons</strong>, <strong>time</strong>, and <strong>trials</strong>.</li>
                 <li>Modeled <strong>directional connectivity dynamics</strong> with <strong>Transfer Entropy</strong>, quantifying engagement-driven shifts in <strong>neural information flow</strong>.</li>
-                <li>Demonstrated that <strong>volitional engagement</strong> sharpens <strong>temporal precision</strong>, strengthens <strong>synchrony</strong>, and stabilizes <strong>across-trial representations</strong>.</li>
+                <li>Demonstrated that <strong>volitional engagement</strong> sharpens <strong>temporal precision</strong>, strengthens <strong>synchrony</strong>, and stabilizes <strong>across-trial representations</strong>.</li> */}
+                <li>Engineered a statistical model to decode PVN neural spike trains</li>
+                <li>Processed silicon probe recordings from oxytocin-linked circuits for unsupervised time-series modeling </li>
+                <li>Achieved dimensionality reduction and latent feature extraction </li>
+                <li>Revealed condition-dependent neural dynamics through unsupervised analysis</li>
               </ul>
               <div className="flex flex-wrap gap-2 text-xs">
-                {["Tensor Decomposition", "TCA", "Dimensionality Reduction", "Time Series Modeling", "Statistical Modeling", "Transfer Entropy", "Neural Data Analysis", "Spike Sorting", "MATLAB", "Python"].map(tag => (
+                {["Statistical Modeling", "Time Series Modeling/Analysis", "Tensor Decomposition", "TCA", "Dimensionality Reduction", "Neural Data Analysis", "Neural Decoding", "MATLAB", "Python"].map(tag => (
                   <span key={tag} className="px-3 py-1 rounded-full bg-muted text-muted-foreground">{tag}</span>
                 ))}
               </div>
@@ -279,9 +294,8 @@ export default function Home() {
               <h3 className="font-semibold text-base mb-2">Machine Learning</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "NLP", "Computer Vision", "Multi-Modal Learning", "Speech Recognition (Whisper)",
-                  "Intent & Entity Recognition", "Dimensionality Reduction (PCA, TCA)", "Reinforcement Learning",
-                  "RNNs", "Transformers", "Search Relevance (OpenSearch Boosting)"
+                  "NLP", "Computer Vision", "Multimodal AI", "Transformers", "Speech Recognition (ASR)",
+                  "Dimensionality Reduction (PCA, TCA)", "NLU", "statistical modeling", "Statistical analysis"
                 ].map(skill => (
                   <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
                     {skill}
@@ -306,7 +320,7 @@ export default function Home() {
             </div>
 
             {/* Algorithms */}
-            <div>
+            {/* <div>
               <h3 className="font-semibold text-base mb-2">Algorithms</h3>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -318,7 +332,7 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Research / Infra */}
             <div className="space-y-6">
@@ -335,6 +349,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              
               <div>
                 <h3 className="font-semibold text-base mb-2">MLOps</h3>
                 <div className="flex flex-wrap gap-2">
@@ -358,15 +373,44 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+  
+        
         {/* Education Section */}
         <section className="space-y-4">
           <h2 className="text-3xl font-bold">Education</h2>
           <div className="space-y-1 text-muted-foreground text-base">
             <p><strong>Master’s in Computer Science</strong>, New York University – Tandon School of Engineering</p>
             <p><em>Thesis:</em> Tensor Component Analysis (TCA) for Neural Plasticity in Maternal Learning</p>
-            <p><em>Advisor:</em> Prof. Robert C. Froemke, NYU Langone Health – Neuroscience Institute</p>
+            {/* <p><em>Advisor:</em> Prof. Robert C. Froemke, NYU Langone Health – Neuroscience Institute</p> */}
           </div>
+        </section>
+
+
+        <section className="space-y-4">
+        <h2 className="text-3xl font-bold"></h2>
+          <p className="text-muted-foreground text-lg text-left max-w-4xl">
+          <div className="text-muted-foreground text-lg text-left space-y-6">
+            <p>
+              <strong>A littel but about me</strong> 🌸
+            </p>
+
+            <p>
+              To me, machine learning feels like music — creative and precise.<br />
+              Growing up playing the piano, I was drawn to the rhythm of repetition, fine-tuning, and the meticulous process of constructing each part—then weaving everything together into a finished performance.<br />
+              Designing AI systems felt strangely familiar — something I naturally understood and enjoyed.<br />
+              I’m most alive when I’m solving something new, hard, or unseen.
+            </p>
+
+            <p>
+              Outside of work (when I find a little time), I love traveling, dancing, and playing the piano.<br />
+              Travel especially shaped me — meeting people from vastly different walks of life taught me more than any textbook ever could. Those memories are my invisible treasures.
+            </p>
+
+            <p>
+              Thank you for being here. I hope something in my life or work speaks to you. 🥰
+            </p>
+          </div>
+          </p>
         </section>
 
       </div>
