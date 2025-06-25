@@ -28,7 +28,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-5xl font-bold leading-tight">Multimodal-AI & NeuroAI</h1>
+          <h1 className="text-5xl font-bold leading-tight">Machine Learning & Data Science/Analytics & NeuroAI</h1>
           <p className="text-muted-foreground text-lg text-left max-w-4xl">
           <div className="text-muted-foreground text-lg text-left space-y-6">
             <p>
