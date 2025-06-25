@@ -32,7 +32,7 @@ export default function Home() {
           <p className="text-muted-foreground text-lg text-left max-w-4xl">
           <div className="text-muted-foreground text-lg text-left space-y-6">
             <p>
-              <strong>Welcome to my world. I’m Aya.</strong> 🌸
+              <strong>Welcome to my world! I’m Aya.</strong> 🌸
             </p>
 
             <p>
@@ -291,11 +291,11 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-sm">
             {/* Machine Learning */}
             <div>
-              <h3 className="font-semibold text-base mb-2">Machine Learning</h3>
+              <h3 className="font-semibold text-base mb-2">ML/AI/DS/Data Analytics</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "NLP", "Computer Vision", "Multimodal AI", "Transformers", "Speech Recognition (ASR)",
-                  "Dimensionality Reduction (PCA, TCA)", "NLU", "statistical modeling", "Statistical analysis"
+                  "NLP", "Computer Vision", "Multimodal AI",
+                  "NLU", "statistical modeling", "Statistical analysis", "Dimensionality Reduction (PCA, TCA)", "Speech Recognition", "end-to-end pipeline", "Deployment"
                 ].map(skill => (
                   <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
                     {skill}
@@ -309,8 +309,8 @@ export default function Home() {
               <h3 className="font-semibold text-base mb-2">Frameworks</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "PyTorch", "TensorFlow", "HuggingFace", "Keras", "spaCy", "Scikit-learn", "NumPy", "Pandas",
-                  "Matplotlib", "Seaborn", "Jupyter", "OpenAPI", "Django", "FastAPI", "React"
+                  "Transformers", "PyTorch", "TensorFlow", "HuggingFace", "Scikit-learn", "NumPy", "Pandas",
+                  "Matplotlib", "Keras", "spaCy", "Seaborn", "Jupyter", "Django", "FastAPI", "React", "Javascript"
                 ].map(skill => (
                   <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
                     {skill}
@@ -334,41 +334,42 @@ export default function Home() {
               </div>
             </div> */}
 
-            {/* Research / Infra */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-semibold text-base mb-2">Neuroscience</h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Computational Neuroscience", "Neural Decoding", "Neural Data Analysis",
-                    "EEG Signal Analysis", "Behavioral Modeling"
-                  ].map(skill => (
-                    <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            {/* NeuroAI */}
+            <div>
+              <h3 className="font-semibold text-base mb-2">NeuroAI</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Neural Decoding", "Neural Data Analysis",
+                  "EEG Signal Analysis", "Behavioral Modeling", "Computational Neuroscience"
+                ].map(skill => (
+                  <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                    {skill}
+                  </span>
+                ))}
               </div>
-              
-              <div>
-                <h3 className="font-semibold text-base mb-2">MLOps</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["Docker", "AWS", "CI/CD", "Git", "Linux", "Apache Spark", "Hadoop"].map(skill => (
-                    <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            </div>
+
+            {/* MLOps */}
+            <div>
+              <h3 className="font-semibold text-base mb-2">MLOps</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Docker", "AWS", "CI/CD", "Git", "Linux", "Apache Spark", "Hadoop", "NLflow"].map(skill => (
+                  <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                    {skill}
+                  </span>
+                ))}
               </div>
-              <div>
-                <h3 className="font-semibold text-base mb-2">Languages</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["Python", "MATLAB", "C++", "SQL", "Shell"].map(skill => (
-                    <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            </div>
+
+            {/* Languages */}
+            <div>
+              <h3 className="font-semibold text-base mb-2">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Python", "MATLAB", "C++", "SQL", "Shell"].map(skill => (
+                  <span key={skill} className="px-2 py-0.5 rounded bg-muted text-muted-foreground border border-muted-foreground/20">
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
