@@ -147,20 +147,20 @@ export default function Home() {
           <div className="grid gap-12 md:grid-cols-[2fr,1fr] items-start">
             <div className="space-y-6 text-lg text-muted-foreground">
             <p>
-              I’m a <strong>Machine Learning Engineer</strong> with hands-on <strong>industry</strong> and <strong>research</strong> experience in applied AI (<strong>NLP, Multimodal, computer vision</strong>), real-time ML system<strong>computational neuroscience</strong>.
+              I’m a <strong>Machine Learning Engineer</strong> with hands-on <strong>industry</strong> and <strong>research</strong> experience in applied AI (<strong>NLP, Multimodal, computer vision</strong>), <strong>real-time ML system</strong>, and <strong>statistical analysis</strong>.
             </p>
                         <p>
             {/* In industry, as an <strong>ML Robotics Engineer</strong>, I led an embedded AI development (voice-to-motion robotics system), demoed live to 10K+ tech/non-tech people at national exhibition. I implemented the <strong>full AI pipeline</strong>: <u>speech recognition</u>, <u>real-time command mapping using a fine-tuned NLP model</u>, and <u>robotic motion execution</u>—all running on <strong>embedded hardware</strong>, with integrated <u>speech synthesis</u>. */}
             </p>
 
             <p>
-              In academia research, at <strong>NYU Grossman School of Medicine, Neuroscience</strong> lab, I Engineered a statistical model (TCA) to decode PVN neural spike trains. With reducting the dimensionality and extracting the latent features, we revealed condition-dependent neural plasticity.
+              In academia research, at <strong>NYU Grossman School of Medicine - NYU Langon Hospital, Neuroscience</strong> lab, I engineered a statistical model (TCA) to decode PVN neural spike trains. With reducting the dimensionality and extracting the latent features, we revealed condition-dependent neural plasticity.
   
 
             </p>
 
             <p>
-            As a technical initiative, I recently built a <strong>real-time recommendation system</strong> that takes and transcribes voice input, extracts intents and entities, and retrieves ranked recommendations, run on scalable FastAPI, React.js, and Docer interface. Intent classification: <strong>99.8%</strong>accuracy. Entity extraction: <strong>99.97%</strong>F1. Achieved <strong>&lt;200ms</strong> E2E latency.
+            As a technical initiative, I recently built a <strong>recommendation system</strong> that takes and transcribes voice input, extracts intents and entities, and retrieves ranked recommendations, run on scalable FastAPI, React.js, and Docer interface. Intent classification: <strong>99.8%</strong>accuracy. Entity extraction: <strong>99.97%</strong>F1. Achieved <strong>&lt;100ms</strong> E2E latency.
             {/* <div className="pt-2">
               <Link
                 href="/resume/AyaOshima_Resume.pdf"
@@ -201,7 +201,7 @@ export default function Home() {
                 <li>Fine-tuned transformer models to achieve <strong>99.8% intent classification accuracy</strong> and <strong>99.97% entity extraction F1</strong>.</li>
                 <li>Designed an end-to-end scalable backend with OpenSearch boosting, FastAPI, and React for seamless low-latency experience.</li> */}
                 <li>Built end-to-end system with ASR input, intent/entity parsing, and semantic retrieval</li>
-                <li>Achieved &lt;200ms E2E latency (React.js + FastAPI + Docker) </li>
+                <li>Achieved &lt;100ms E2E latency (React.js + FastAPI + Docker) </li>
                 <li>Fine-tuned DistilBERT (intent) and RoBERTa-backed spaCy NER (entity), in PyTorch; achieved 99.8% intent accuracy and 99.97% entity F1, tracked via MLflow</li>
                 <li>Implemented cold-start personalization via Bayesian smoothing + MMR reranking</li>
               </ul>
@@ -257,10 +257,10 @@ export default function Home() {
                 <li>Applied <strong>Tensor Component Analysis (TCA)</strong> to decompose <strong>high-dimensional neural activity</strong> into interpretable <strong>latent factors</strong> across <strong>neurons</strong>, <strong>time</strong>, and <strong>trials</strong>.</li>
                 <li>Modeled <strong>directional connectivity dynamics</strong> with <strong>Transfer Entropy</strong>, quantifying engagement-driven shifts in <strong>neural information flow</strong>.</li>
                 <li>Demonstrated that <strong>volitional engagement</strong> sharpens <strong>temporal precision</strong>, strengthens <strong>synchrony</strong>, and stabilizes <strong>across-trial representations</strong>.</li> */}
-                <li>Engineered a statistical model to decode PVN neural spike trains</li>
-                <li>Processed silicon probe recordings from oxytocin-linked circuits for unsupervised time-series modeling </li>
-                <li>Achieved dimensionality reduction and latent feature extraction </li>
-                <li>Revealed condition-dependent neural dynamics through unsupervised analysis</li>
+                <li>Investigated social learning with neuromodulation and plasticity</li>
+                <li>Decoded neural firings from oxytocin-linked PVN circuits, supporting complex high-dimensional data analysis</li>
+                <li>Engineered a statistical model, Tensor Component Analysis (TCA), and developed time-series analysis pipelines for dimensionality reduction and feature extraction, implementing data processing methods including z-score normalization and Peri-Stimulus Time Histograms (PSTHs) in Python and MATLAB</li>
+                <li>Identified increased neural synchrony, more stable assemblies, and enhanced temporal coding during active engagement, contributing to insights on oxytocin's impact on PVN plasticity</li>
               </ul>
               <div className="flex flex-wrap gap-2 text-xs">
                 {["Statistical Modeling", "Time Series Modeling/Analysis", "Tensor Decomposition", "TCA", "Dimensionality Reduction", "Neural Data Analysis", "Neural Decoding", "MATLAB", "Python"].map(tag => (
